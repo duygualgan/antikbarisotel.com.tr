@@ -72,7 +72,7 @@ footer{
     margin: 0;
 }
 .footer-distributed h3 span{
-    color: #e0ac1c;
+    color: #c32317;
 }
 .footer-distributed .footer-links{
     color: #fff;
@@ -89,10 +89,10 @@ footer{
     font-size: 14px;
     font-weight: normal;
     margin: 0;
+    margin-top: 20px;
 }
 .footer-distributed .footer-center{
     width: 40%;
-    text-align: start;
 }
 .footer-distributed .footer-center i{
     background-color: #33383b;
@@ -123,7 +123,7 @@ footer{
     line-height: 2;
 }
 .footer-distributed .footer-center p a{
-    color: #e0ac1a;
+    color: #c32317;
     text-decoration: none;
 }
 .footer-distributed .footer-company-about{
@@ -142,7 +142,7 @@ footer{
 }
 
 
-@media (max-width: 880px) {
+/* @media (max-width: 880px) {
     .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
         display: block;
         width: 100%;
@@ -152,7 +152,7 @@ footer{
     .footer-distributed .footer-center i {
         margin-left: 0;
     }
-} 
+}  */
 
 @media only screen and (max-width:1320px){
     header{
@@ -205,5 +205,14 @@ footer{
     }
     footer{
         position: static;
+    }
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
     }
 }
