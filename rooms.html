@@ -30,7 +30,7 @@
                     <a href="rooms.html" >Odalar</a>
                 </li>
                 <li>
-                    <a href="" >Hizmetler</a>
+                    <a href="hizmetlerimiz.html" >Hizmetler</a>
                 </li>
                 <li>
                     <a href="rezervasyon.html" >Rezervasyon</a>
@@ -183,49 +183,12 @@
         <div class = "services-container">
             <article class = "service">            
                 <div class = "service-content">
-                    <p>Guruplara ve şirketlere görüşmeler ile özel fiyatlar verilecektir.</p>
+                    <p>Gruplara ve şirketlere görüşmeler ile özel fiyatlar verilecektir.</p>
                     <p>Grup veya şirket iseniz <a href="iletisim.html">İletişim sayfamızdan</a> bize ulaşabilirsiniz.</p>                    
                 </div>
             </article>                                 
         </div>
-    </section>
-    <section class = "customers" id = "customers">
-        <div class = "sec-width">
-            <div class = "title">
-                <h2>HABERLER</h2>
-            </div>
-            <div class = "customers-container">
-                <!-- single customer -->
-                <div class = "customer">                
-                    <h3>Habeer Başlığı</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>                                        
-                    <span>17 Ağustos</span>
-                </div>
-                <!-- end of single customer -->
-                <!-- single customer -->
-                <div class = "customer">        
-                    <h3>Habeer Başlığı</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
-                    <span>17 Ağustos</span>
-                </div>
-                <!-- end of single customer -->
-                <!-- single customer -->
-                <div class = "customer">
-                    <h3>Habeer Başlığı</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>                    
-                    <span>17 Ağustos</span>
-                </div>
-                <!-- end of single customer -->
-                <!-- single customer -->
-                <div class = "customer">                    
-                    <h3>Habeer Başlığı</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>                    
-                    <span>17 Ağustos</span>
-                </div>
-                <!-- end of single customer -->
-            </div>
-        </div>
-    </section>
+    </section>    
     <footer class="footer-distributed">
         <div class="footer-left">
             <h3>Antik <span> Barış Otel </span></h3>
@@ -269,5 +232,13 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function () {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
