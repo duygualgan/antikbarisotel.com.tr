@@ -28,7 +28,7 @@ html{
     padding: 10px;
     width: 140px;
     display: block;
-    margin: 15px auto;
+    margin: 95px auto;
     cursor: pointer;
     transition: var(--transition);
 }

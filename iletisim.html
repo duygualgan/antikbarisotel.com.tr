@@ -1,3 +1,4 @@
+<!-- Made by Duygu ALGAN -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -124,7 +125,7 @@
                 <div class = "service-content">
                     <h2>Adres</h2>
                     <p>Tepecik Mah. İstiklal Cad. Yavuz Sok. No:24 İzmit - Kocaeli / Türkiye</p>
-                    <p>E-posta: info@antikbarisotel.com</p>
+                    <p><a href="#">info@antikbarisotel.com</a></p>
                     <p>Telefon: +90 262 321 77 71</p>
                     <p>Fax: +90 262 321 77 92</p>
                 </div>
@@ -153,8 +154,8 @@
                         <span>Hakkında</span>
                         <strong>Antik Barış Otel</strong>, Barış Şirketler Grubu üyesidir.
                     </p>
-                    <p class="footer-company-name">Copyright 2023 ©  <strong>Duygu Algan</strong>
-                        all right reserved</p>
+                    <!-- <p class="footer-company-name">Copyright 2023 ©  <strong>Duygu Algan</strong>
+                        all right reserved</p> -->
                 </div>
                 <div class="footer-center">
                     <div>
@@ -177,7 +178,11 @@
                 </div>
             </footer>
     <script script.js>
-
+        hamburger = document.querySelector(".hamburger");
+            hamburger.onclick = function(){
+                navBar= document.querySelector(".nav-bar");
+                navBar.classList.toggle("active");
+            }
     </script>
 </body>
 </html>
