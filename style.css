@@ -169,6 +169,13 @@ header{
     padding-left: 20px;
     text-align: justify;
 }
+.service-content table thead tr th{
+    color: var(--red);
+    opacity: 0.8;
+}
+.service-content a{
+    color: var(--red);
+}
 .service-content h2{
     opacity: 0.7;
 }
@@ -264,7 +271,7 @@ header{
     padding-bottom: 25px;
     background: #fff;
     color: black;
-    border: 1px solid #c32317;
+    border: 1px solid #938e8e;
 }
 .room-text{
     padding: 5px 20px;
@@ -397,7 +404,23 @@ header{
         height: 100px;
     }
 }
-
+/*OtelPages*/
+.conteiner-otel{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.yt-holder{
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 56%;
+    margin-top: 50px;
+}
+.yt-holder iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
 /*FOOTER*/
 footer{
@@ -560,4 +583,155 @@ footer{
     .footer-distributed .footer-center i {
         margin-left: 0;
     }
+}
+
+
+/**/
+
+.cerceve-ust{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.cerceve{
+    width: 60%;
+    overflow: hidden;
+    border: 1px solid #062e51;
+    box-sizing: border-box;
+}
+.galeri{
+    position: relative;
+    width: 400%;
+    height: 40%;
+    left: 0;
+    animation: 16s slayt infinite;
+}
+.galeri img{
+    width: 25%;
+    float: left;
+}
+@keyframes slayt{
+    0%{left: 0%;}
+    20%{left: 0%;}
+    25%{left: -100%;}
+    45%{left: -100%;}
+    50%{left: -200%;}
+    70%{left: -200%;}
+    75%{left: -300%;}
+    90%{left: -300%;}
+}
+
+
+
+/*İletişim*/
+.container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.container:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("img/bg.jpg") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contact-box{
+	max-width: 2000px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left{
+	background: url("foto/kroki.jpg") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+.right h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: var(--red);
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn1{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color:var(--red);
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn1:hover{
+    background-color: #f77a71;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
 }
