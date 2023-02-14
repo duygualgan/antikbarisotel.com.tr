@@ -81,23 +81,6 @@ p {
 	color: crimson;
 }
 
-.cta {
-	display: inline-block;
-	padding: 10px 30px;
-	color: white;
-	background-color: transparent;
-	border: 2px solid crimson;
-	font-size: 2rem;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	margin-top: 30px;
-	transition: 0.3s ease;
-	transition-property: background-color, color;
-}
-.cta:hover {
-	color: white;
-	background-color: crimson;
-}
 .brand h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
@@ -167,7 +150,7 @@ p {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
-	color: rgba(0, 0, 0, 0.021);
+	color: var(--red);
 	font-size: 13rem;
 	letter-spacing: 50px;
 	z-index: -1;
@@ -262,7 +245,7 @@ p {
 		display: block;
 		height: auto;
 		width: fit-content;
-		background-color: transparent;
+		/* background-color: transparent; */
 	}
 	#header .nav-list ul li {
 		display: inline-block;
@@ -381,6 +364,15 @@ p {
 .service-content table thead tr th{
     color: var(--red);
     opacity: 0.8;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+}
+.service-content table tbody tr td{
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    width: 130px;
 }
 .service-content a{
     color: var(--red);
@@ -390,6 +382,7 @@ p {
 }
 .service-content p{
     margin-bottom: 10px;
+    font-size: 15px;
 }
 @media(min-width: 992px){
     .services-container{
@@ -398,7 +391,7 @@ p {
         grid-column-gap: 30px;
     }
     .title h2{
-        font-size: 10px!important;
+        font-size: 16px!important;
     }
 }
 @media(max-width: 500px){
@@ -494,6 +487,7 @@ p {
 }
 .room-text ul li{
     padding: 7px 0;
+    font-size: 15px;
 }
 .room-text ul li i{
     color: var(--red);
