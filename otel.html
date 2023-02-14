@@ -12,39 +12,43 @@
 </head>
 
 <body>
-    <!-- <header başlangıcı> -->
-    <header>
-        <div class="logo">
-            <a href=""><img src="./foto/logo.gif" alt=""></a>
+    <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="index.html">
+            <img src="./foto/logo.gif" alt="">
+          </a>
         </div>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li>
+                <a href="index.html">Anasayfa</a>
+            </li>
+            <li>
+                <a href="otel.html">Otel</a>
+            </li>
+            <li>
+                <a href="rooms.html" >Odalar</a>
+            </li>
+            <li>
+                <a href="hizmetlerimiz.html">Hizmetler</a>
+            </li>
+            <!-- <li>
+                <a href="rezervasyon.html">Rezervasyon</a>
+            </li> -->
+            <li>
+                <a href="iletisim.html">İletişim</a>
+            </li>
+        </ul>
         </div>
-        <nav class="nav-bar">
-            <ul>
-                <li>
-                    <a href="index.html">Anasayfa</a>
-                </li>
-                <li>
-                    <a href="otel.html" class="active">Otel</a>
-                </li>
-                <li>
-                    <a href="rooms.html">Odalar</a>
-                </li>
-                <li>
-                    <a href="hizmetlerimiz.html">Hizmetler</a>
-                </li>
-                <li>
-                    <a href="rezervasyon.html">Rezervasyon</a>
-                </li>
-                <li>
-                    <a href="iletisim.html">İletişim</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+      </div>
+    </div>
+  </section>
     <section class="services sec-width" id="services">
         <div class="title">
             <h2>Otelimiz Hakkında Röportaj</h2>
@@ -194,13 +198,9 @@
                 </div>
             </div>
         </footer>
-    <script>
-        hamburger = document.querySelector(".hamburger");
-        hamburger.onclick = function () {
-            navBar = document.querySelector(".nav-bar");
-            navBar.classList.toggle("active");
-        }
-    </script>
+        <script src="./script.js">
+        
+        </script>
 </body>
 
 </html>

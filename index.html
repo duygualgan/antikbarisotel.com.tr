@@ -10,39 +10,47 @@
     <link rel="stylesheet" href="all.min.css">
 </head>
 <body>
-    <!-- <header başlangıcı> -->
-        <header>
-            <div class="logo">
-                <a href=""><img src="./foto/logo.gif" alt=""></a>
-            </div>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <nav class="nav-bar">
-                <ul>
-                    <li>
-                        <a href="index.html" class="active">Anasayfa</a>
-                    </li>
-                    <li>
-                        <a href="otel.html" >Otel</a>
-                    </li>
-                    <li>
-                        <a href="rooms.html" >Odalar</a>
-                    </li>
-                    <li>
-                        <a href="hizmetlerimiz.html" >Hizmetler</a>
-                    </li>
-                    <li>
-                        <a href="rezervasyon.html" >Rezervasyon</a>
-                    </li>
-                    <li>
-                        <a href="iletisim.html" >İletişim</a>
-                    </li> 
-                </ul>
-            </nav>
-        </header>
+    
+
+        <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <img src="./foto/logo.gif" alt="">
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li>
+                <a href="index.html">Anasayfa</a>
+            </li>
+            <li>
+                <a href="otel.html">Otel</a>
+            </li>
+            <li>
+                <a href="rooms.html" class="active">Odalar</a>
+            </li>
+            <li>
+                <a href="hizmetlerimiz.html">Hizmetler</a>
+            </li>
+            <!-- <li>
+                <a href="rezervasyon.html">Rezervasyon</a>
+            </li> -->
+            <li>
+                <a href="iletisim.html">İletişim</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+        
     <!-- </header bitişi> -->
     <!-- giriş fotosu -->
         <div class = "head-bottom flex">
@@ -179,7 +187,7 @@
         </div>
     </section>
     <!-- REZERVASYON -->
-    <div class = "book">
+    <!-- <div class = "book">
         <form class = "book-form">
             <div class = "form-item">
                 <label for = "checkin-date">Giriş Tarihi: </label>
@@ -205,7 +213,8 @@
                 <input type = "submit" class = "btn" value = "Rezervasyon Yap">
             </div>
         </form>
-    </div>
+    </div> -->
+    
     <!-- hizmetlerimiz -->
     <section class = "services sec-width" id = "services">
         <div class = "title">
@@ -346,12 +355,8 @@
             </div>
         </footer>
     <!-- </footer bitişi> -->
-    <script script.js>
-        hamburger = document.querySelector(".hamburger");
-            hamburger.onclick = function () {
-                navBar = document.querySelector(".nav-bar");
-                navBar.classList.toggle("active");
-            }
+    <script  src="./script.js">
+        
     </script>
 </body>
 </html>

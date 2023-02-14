@@ -1,21 +1,25 @@
-const navBtn = document.getElementById('nav-btn');
-const cancelBtn = document.getElementById('cancel-btn');
-const sideNav = document.getElementById('sidenav');
-const modal = document.getElementById('modal');
+const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
+const header = document.querySelector('.header.container');
 
-navBtn.addEventListener("click", function(){
-    sideNav.classList.add('show');
-    modal.classList.add('showModal');
+hamburger.addEventListener('click', () => {
+	hamburger.classList.toggle('active');
+	mobile_menu.classList.toggle('active');
 });
 
-cancelBtn.addEventListener('click', function(){
-    sideNav.classList.remove('show');
-    modal.classList.remove('showModal');
+document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 250) {
+		header.style.backgroundColor = '#29323c';
+	} else {
+		header.style.backgroundColor = 'transparent';
+	}
 });
 
-window.addEventListener('click', function(event){
-    if(event.target === modal){
-        sideNav.classList.remove('show');
-        modal.classList.remove('showModal');
-    }
+menu_item.forEach((item) => {
+	item.addEventListener('click', () => {
+		hamburger.classList.toggle('active');
+		mobile_menu.classList.toggle('active');
+	});
 });
