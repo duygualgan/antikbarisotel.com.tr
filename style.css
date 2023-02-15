@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
 
 :root{
     --transition: all 0.7s ease;
@@ -135,9 +135,9 @@ p {
 	left: 0%;
 }
 #header .nav-list ul a {
-	font-size: 1.5rem;
-	font-weight: 50;
-	letter-spacing: 0.2rem;
+	font-size: 2rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
@@ -278,11 +278,12 @@ p {
 /**/
 
 .head-bottom{
-    background: linear-gradient(rgba(177, 171, 171, 0.6), rgba(0, 0, 0, 0.2)), url("foto/DisCephe1b.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(177, 171, 171, 0.6), rgba(0, 0, 0, 0.2)), url("foto/galeri5.jpg") center/cover no-repeat;
     flex: 1;
     text-align: center;
-    width: 85%;
-    height: 350px;
+    max-width: 85%;
+    height: 600px;
+    object-fit: cover;
     margin: 0 auto;
     margin-top: 130px;
 }
@@ -313,6 +314,10 @@ p {
     background: transparent;
 }
 @media(max-width: 500px){
+    .head-bottom{
+        height: 400px;
+        background: linear-gradient(rgba(177, 171, 171, 0.6), rgba(0, 0, 0, 0.2)), url("foto/DisCephe1b.jpg") center/cover no-repeat;
+    }
     .head-btn{
         font-size: 17px;
     }
@@ -365,6 +370,8 @@ p {
     color: var(--red);
     opacity: 0.8;
     font-size: 16px;
+    padding: 5px;
+    border: 1px solid #dee2e685 ;
     text-align: center;
     align-items: center;
 }
@@ -372,6 +379,8 @@ p {
     font-size: 15px;
     text-align: center;
     align-items: center;
+    border: 1px solid #afb2b485 ;
+    padding: 5px;
     width: 130px;
 }
 .service-content a{
@@ -397,6 +406,37 @@ p {
 @media(max-width: 500px){
     .title h2{
         font-size: 24px;
+    }
+}
+@media(max-width : 700px){
+    .service-content table thead{
+        display: none;
+    }
+    .service-content table, .service-content table tbody,.service-content table tr, .service-content table td{
+        display: block;
+        width: 100%;
+    }
+    .service-content table tr{
+        margin-bottom: 15px;
+    }
+    .service-content table tbody tr td{
+        text-align: right;
+        padding-right: 10%;
+        position: relative;
+        width: 250px;
+    }
+    tbody tr{
+        border: 1px solid black;
+    }
+    table tr ::before{
+        content: attr(data-title) ":";
+        float: left;
+        left: 0;
+        color: var(--red);
+        width: 50%;
+        padding-left: 15px;
+        font-size: 14px;
+        text-align: left;
     }
 }
 /*REZERVASYON*/
@@ -958,7 +998,7 @@ textarea{
 
 }
 .kroki img {
-    width: 90%;
-    margin-right: 5%;
-    margin-left: 5%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
