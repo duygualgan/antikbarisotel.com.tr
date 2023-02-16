@@ -244,6 +244,7 @@ p {
 		position: initial;
 		display: block;
 		height: auto;
+        width: -moz-fit-content;
 		width: fit-content;
 		/* background-color: transparent; */
 	}
