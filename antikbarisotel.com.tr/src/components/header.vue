@@ -5,7 +5,7 @@
     <div class="header container">
       <div class="nav-bar">
         <div class="brand">
-          <a href="#">
+          <a href="/">
             <img src="../assets/foto/logo.gif" alt="">
           </a>
         </div>
@@ -23,7 +23,7 @@
                 <!-- <a href="#" data-after="Otel">Otel</a> -->
             </li>
             <li>
-              <router-link to="/odalarımız" class="nav-top-link" >Odalar</router-link>
+              <router-link to="/odalar" class="nav-top-link" >Odalar</router-link>
                 <!-- <a href="#" data-after="Odalar">Odalar</a> -->
             </li>
             <li>
@@ -34,7 +34,7 @@
                 <a href="rezervasyon.html">Rezervasyon</a>
             </li> -->
             <li>
-              <router-link to="/iletişim" class="nav-top-link" >İLETİŞİM</router-link>
+              <router-link to="/iletisim" class="nav-top-link" >İLETİŞİM</router-link>
                 <!-- <a href="#" data-after="İletişim">İLETİŞİM</a> -->
             </li>
         </ul>

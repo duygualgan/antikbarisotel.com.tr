@@ -10,7 +10,7 @@
                 <router-link to="/otel" class="nav-top-link" >Otel</router-link>
                 <!-- <a href="#">Otel</a> -->
                 |
-                <router-link to="/odalarımız" class="nav-top-link" >Odalar</router-link>
+                <router-link to="/odalar" class="nav-top-link" >Odalar</router-link>
                 <!-- <a href="#">Odalar</a> -->
                 |
                 <router-link to="/hizmetlerimiz" class="nav-top-link" >Hizmetler</router-link>
@@ -19,7 +19,7 @@
                 
                 <!-- <a href="rezervasyon.html">Rezervasyon</a>-->
                 | 
-                <router-link to="/iletişim" class="nav-top-link" >İletişim</router-link>
+                <router-link to="/iletisim" class="nav-top-link" >İletişim</router-link>
                 <!-- <a href="#">İletişim</a> -->
                 </p>
                 <p class="footer-company-about">

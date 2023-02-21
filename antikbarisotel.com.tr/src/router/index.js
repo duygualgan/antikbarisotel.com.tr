@@ -16,12 +16,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/OtelPages.vue')
   },
   {
-    path: '/odalarımız',
+    path: '/odalar',
     name: 'RoomsPage',
     component: () => import(/* webpackChunkName: "cart" */ '../views/RoomsPage.vue')
   },
   {
-    path: '/iletişim',
+    path: '/iletisim',
     name: 'ContactPage',
     component: () => import(/* webpackChunkName: "contact" */ '../views/ContactPage.vue')
   },
