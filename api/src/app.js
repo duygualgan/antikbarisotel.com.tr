@@ -3,9 +3,6 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
 
-
-//const { getTodos, addTodo, deleteTodo, updateTodo } = require('./sql/queries');
-
 const app = express()
 app.use(morgan('combined'))
 app.use(bodyParser.json())
@@ -19,16 +16,14 @@ app.get('/status', (req, res) =>{
 
 // app.listen(process.env.PORT || 8081)
 
-// const express = require('express');
 const mysql = require('mysql2');
-//const { create } = require('core-js/core/object');
 
 
 const connection = mysql.createConnection({
   host     : 'localhost', // Veritabanı sunucusunun adresi
   user     : 'root',      // Veritabanı kullanıcısı
   password : 'duygu123',  // Veritabanı kullanıcısının şifresi
-  database : 'duygu'      // Kullanılacak veritabanı adı
+  database : 'news'      // Kullanılacak veritabanı adı
 });
 
 connection.connect((err) => {
@@ -36,8 +31,31 @@ connection.connect((err) => {
     console.error('Veritabanına bağlanırken hata oluştu: ' + err.stack);
     return;
   }
-
   console.log('Veritabanına bağlandı. Bağlantı kimliği: ' + connection.threadId);
+  //******** CREATE EDİLDİ */
+  // var database = "CREATE DATABASE news";
+  // connection.query(database,function (err){
+  //   if (err) {
+  //     console.error('Veritabanına bağlanırken hata oluştu: ' + err.stack);
+  //     return;
+  //   }else console.error("Database oluştu")
+  // })
+//******TABLE OLUŞTURULDU */
+  // var table = `CREATE TABLE news_table(
+  //   id INT AUTO_INCREMENT PRIMARY KEY,  
+  //   title nvarchar(100), 
+  //   images BLOB, 
+  //   news_date date, 
+  //   text nvarchar(300))`;
+  // connection.query(table, function(err){
+  //   if (err) {
+  //     console.error('Veritabanına tablo eklerken hata: ' + err.stack);
+  //     return;
+  //   } else console.log("tablo oluştu")
+  // })
+//**********SAHTE VERİ EKLENDİ */
+  
+  
 });
 
 // Express.js uygulama kodları buraya gelecek
