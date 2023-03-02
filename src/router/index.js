@@ -30,6 +30,11 @@ const routes = [
     name: 'ServicesPage',
     component: () => import(/* webpackChunkName: "contact" */ '../views/ServicesPage.vue')
   },
+  {
+    path: '/admin',
+    name: 'adminPage',
+    component: () => import(/* webpackChunkName: "contact" */ '../views/adminPage.vue')
+  },
 ]
 
 const router = createRouter({
