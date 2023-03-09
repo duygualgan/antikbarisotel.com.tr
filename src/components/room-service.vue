@@ -49,7 +49,7 @@
             <article class="service">
                 <div class="service-content">
                     <p>Gruplara ve şirketlere görüşmeler ile özel fiyatlar verilecektir.</p>
-                    <p>Grup veya şirket iseniz <a href="iletisim.html">İletişim sayfamızdan</a> bize ulaşabilirsiniz.
+                    <p>Grup veya şirket iseniz <router-link to="/iletisim">İletişim sayfamızdan</router-link> bize ulaşabilirsiniz.
                     </p>
                 </div>
             </article>

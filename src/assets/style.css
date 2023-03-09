@@ -1004,10 +1004,6 @@ textarea{
     margin-right: 10%;
 }
 
-
-
-
-
 h1 {
   font-size: 2.5rem;
   text-align: center;
@@ -1047,3 +1043,88 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
   background-color: #c85080;
 }
+/* news page  */
+.news{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 150px;
+}
+.colorh2{
+    color: var(--red);
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.onenews{
+    border: #000000 1px solid;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+}
+  
+.onenews h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #d37912;
+}
+  
+/* Haber resmi */
+.clthimg {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+  
+/* Haber tarihi */
+.onenews p:first-of-type {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #666;
+}
+  
+/* Haber metni */
+.onenews p:last-of-type {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #444;
+}
+
+
+@media screen and (max-width: 767px) {
+    /* Mobil cihazlar için */
+    .onenews {
+      width: 100%;
+    }
+  }
+  
+  /* Haber başlığı */
+  .onenews h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    
+  }
+  
+  /* Haber resmi */
+  .clthimg {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Haber tarihi */
+  .onenews p:first-of-type {
+    font-size: 13px;
+    margin-bottom: 5px;
+    
+  }
+  
+  /* Haber metni */
+  .onenews p:last-of-type {
+    font-size: 20px;
+    line-height: 1.5;
+    
+  }
+  
