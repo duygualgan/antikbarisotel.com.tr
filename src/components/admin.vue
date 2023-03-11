@@ -1,58 +1,67 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <div class="add-news">
-      <h2>Haber Ekle</h2>
-      <form class="admin-form" @submit.prevent="addNews">
-        <div>
-          <label>Başlık</label>
-          <input type="text" v-model="title" />
-        </div>
-        <div>
-          <label>Resim</label>
-          <input type="text" v-model="images" />
-        </div>
-        <div>
-          <label>Tarih</label>
-          <input type="date" v-model="date" />
-        </div>
-        <div>
-          <label>Metin</label>
-          <textarea v-model="text"></textarea>
-        </div>
-        <button type="submit">Ekle</button>
-      </form>
-    </div>
-  </template>
-  
-  <script>
-  import axios from 'axios';
-  
-  export default {
-    data() {
-      return {
+  <div class="add-news">
+    <h2>Haber Ekle</h2>
+
+    <form @submit.prevent="saveNews">
+      <label for="title">Başlık</label>
+      <input type="text" id="title" v-model="news.title" required>
+
+      <label for="date">Tarih</label>
+      <input type="date" id="date" v-model="news.news_date" required>
+
+      <label for="text">Metin</label>
+      <textarea id="text" v-model="news.text" required></textarea>
+
+      <label for="images">Resim</label>
+      <input type="file" id="images" @change="onImageChange">
+
+      <button type="submit">Kaydet</button>
+    </form>
+  </div>
+</template>  
+
+<script>
+import axios from 'axios'
+
+export default {
+  data() {
+    return {
+      news: {
         title: '',
-        images: '',
-        date: '',
-        text: ''
-      };
-    },
-    methods: {
-      addNews() {
-        const news = {
-          title: this.title,
-          images: this.images,
-          date: this.date,
-          text: this.text
-        };
-        axios.post('/addNews', news)
-          .then(response => {
-            console.log(response.data);
-          })
-          .catch(error => {
-            console.log(error);
-          });
+        news_date: '',
+        text: '',
+        images: null
       }
     }
-  };
-  </script>
-  
+  },
+  methods: {
+    async saveNews() {
+
+      const formData = new FormData()
+      formData.append('title', this.news.title)
+      formData.append('news_date', this.news.news_date)
+      formData.append('text', this.news.text)
+      formData.append('images', this.news.images)
+
+      console.log(formData)
+
+      try {
+
+        await axios.post('http://localhost:3000/api/news', formData,{
+          headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+        })
+        alert('Haber kaydedildi.')
+      } catch (error) {
+        console.log(error)
+        alert('Haber kaydedilemedi.')
+      }
+    },
+    onImageChange(event) {
+      this.news.images = event.target.files[0]
+    }
+  }
+}
+</script>

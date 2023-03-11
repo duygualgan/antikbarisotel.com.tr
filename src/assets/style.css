@@ -1109,7 +1109,7 @@ form button[type="submit"]:hover {
   
   /* Haber resmi */
   .clthimg {
-    width: 100%;
+    width: 200px;
     height: auto;
     margin-bottom: 10px;
   }
@@ -1128,3 +1128,11 @@ form button[type="submit"]:hover {
     
   }
   
+
+  /* ADMİN PAGE */
+  .add-news{
+    margin-top: 150px;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
