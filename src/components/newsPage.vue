@@ -4,7 +4,7 @@
     <div class="onenews" v-for="news in filteredNews" :key="news.id">
       <router-link to="/news/${news.id}"> {{ news.title }}</router-link>
       <h2>{{ news.title }}</h2>
-      <img class="clthimg" :src="news.images" :alt="news.title">
+      <img class="newsimg" :src="news.images" :alt="news.title">
       <p class="date">{{ news.news_date }}</p>
       <p>{{ news.text }}</p>
       <router-view />

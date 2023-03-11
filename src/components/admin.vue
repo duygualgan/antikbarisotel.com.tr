@@ -4,16 +4,16 @@
     <h2>Haber Ekle</h2>
 
     <form @submit.prevent="saveNews">
-      <label for="title">Başlık</label>
+      <label for="title">Haber Başlığı</label>
       <input type="text" id="title" v-model="news.title" required>
 
-      <label for="date">Tarih</label>
+      <label for="date">Haber Tarihi</label>
       <input type="date" id="date" v-model="news.news_date" required>
 
-      <label for="text">Metin</label>
+      <label for="text">Haber Metini</label>
       <textarea id="text" v-model="news.text" required></textarea>
 
-      <label for="images">Resim</label>
+      <label for="images">Haber Resmi</label>
       <input type="file" id="images" @change="onImageChange">
 
       <button type="submit">Kaydet</button>
