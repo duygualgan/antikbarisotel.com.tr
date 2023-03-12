@@ -31,19 +31,18 @@ export default {
         const response = await axios.get("http://localhost:3000/status");
 
         const news = response.data.map(item => {
-    let _buffer = new Buffer.from(item.images.data, 'base64')
+         // let _buffer = new Buffer.from(item.images.data, 'base64')
 
-    return {
-        id: item.id,
-        images: "data:image/png;base64, "+ _buffer.toString('base64'),
-        news_date: item.news_date,
-        text: item.text,
-        title: item.title
-    }
-})
-console.log(news)
-
-
+          return {
+            id: item.id,
+            images: `http://localhost:3000/${item.images}`,
+            // images: "data:image/png;base64, "+ _buffer.toString('base64'),
+            news_date: item.news_date,
+            text: item.text,
+            title: item.title
+          }
+        })
+        console.log(news)
 
         filteredNews.value = news;
 
@@ -57,3 +56,39 @@ console.log(news)
   }
 };
 </script>
+
+
+<!-- <script lang="js">
+import { onMounted, ref } from 'vue';
+import axios from 'axios';
+
+export default {
+  setup() {
+    const filteredNews = ref([]);
+
+    onMounted(async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/status");
+
+        const news = response.data.map(item => {
+          return {
+            id: item.id,
+            images: `/images/${item.images}`, // Resim yolu olarak düzenlenmiş images özelliği
+            news_date: item.news_date,
+            text: item.text,
+            title: item.title
+          }
+        })
+
+        filteredNews.value = news;
+
+        console.log(response.data)
+      } catch (error) {
+        console.error(error);
+      }
+    });
+
+    return { filteredNews };
+  }
+};
+</script> -->
