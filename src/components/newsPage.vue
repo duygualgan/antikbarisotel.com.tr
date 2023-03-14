@@ -2,7 +2,8 @@
   <div class="news">
     <h2 class="colorh2">HABERLER</h2>
     <div class="onenews" v-for="news in filteredNews" :key="news.id">
-      <router-link to="/news/${news.id}"> {{ news.title }}</router-link>
+      <!-- <router-link to="/news/${news.id}"> {{ news.title }}</router-link> -->
+      <router-link :to="{ name: 'newsDetails', params: { id: news.id } }">{{ news.title }}</router-link>
       <h2>{{ news.title }}</h2>
       <img class="newsimg" :src="news.images" :alt="news.title">
       <p class="date">{{ news.news_date }}</p>
@@ -30,13 +31,10 @@ export default {
       try {
         const response = await axios.get("http://localhost:3000/status");
 
-        const news = response.data.map(item => {
-         // let _buffer = new Buffer.from(item.images.data, 'base64')
-
+        const news = response.data.map(item => {          
           return {
             id: item.id,
-            images: `http://localhost:3000/${item.images}`,
-            // images: "data:image/png;base64, "+ _buffer.toString('base64'),
+            images: `data:image/png;base64, ${item.imageAsBase64}`,
             news_date: item.news_date,
             text: item.text,
             title: item.title

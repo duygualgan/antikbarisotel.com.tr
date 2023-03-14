@@ -18,6 +18,7 @@ app.use(cors());
 app.use(express.json());
 
 const db = require("./database");
+const { query } = require("express");
 
 const upload = multer();
 
@@ -42,12 +43,25 @@ app.get("/", (req, res) => {
   res.sendFile("index.html", { root: __dirname });
 });
 
-app.get("/status", (req, res) => {
-  connection.query("SELECT * FROM news", (err, results) => {
-    if (err) throw err;
-    res.send(results);
-  });
+app.get("/status", async (req, res)  => {
+  try{
+    const query = util.promisify(connection.query).bind(connection);
+
+  let result = await query(
+    "SELECT * FROM news"
+    );
+    console.log(result)
+    result.forEach(item => {
+      item.imageAsBase64 = fs.readFileSync(item.images, {encoding: 'base64'}); 
+    })
+    res.send(result)
+  }catch(err){
+    console.log("statusde hata oldu")
+    console.log(err)
+  }
+  
 });
+
 
 
 //images direkt database e kaydedildiği version
@@ -108,10 +122,24 @@ app.post('/api/news', upload.single('images'), async (req, res) => {
 });
 
 
-app.get("/news/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  const newsPage = require("./database", { root: __dirname });
-  const found = newsPage.find((news) => news.id === id);
+app.get('/news/:id', (req, res) => {
+  const id = req.params.id;
+  // MySQL'den haber detayını sorgula
+  const query = ('SELECT * FROM news WHERE id = ?');
+  connection.query(query, [id], (err, results, fields) => {
+    if (err) {
+      console.error('MySQL error: ' + err.stack);
+      res.status(500).json({ error: 'An error occurred while retrieving news details' });
+      return;
+    }
+
+    // Haber detaylarını JSON formatında döndür
+    if (results.length > 0) {
+      res.json(results[0]);
+    } else {
+      res.status(404).json({ error: 'News not found' });
+    }
+  });
 });
 
 app.listen(port, () => {
