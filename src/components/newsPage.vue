@@ -2,12 +2,11 @@
   <div class="news">
     <h2 class="colorh2">HABERLER</h2>
     <div class="onenews" v-for="news in filteredNews" :key="news.id">
-      <!-- <router-link to="/news/${news.id}"> {{ news.title }}</router-link> -->
-      <router-link :to="{ name: 'newsDetails', params: { id: news.id } }">{{ news.title }}</router-link>
       <h2>{{ news.title }}</h2>
       <img class="newsimg" :src="news.images" :alt="news.title">
       <p class="date">{{ news.news_date }}</p>
       <p>{{ news.text }}</p>
+      <router-link :to="{ name: 'newsDetails', params: { id: news.id } }"> Haber Detayları </router-link>
       <router-view />
     </div>
   </div>

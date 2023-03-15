@@ -1,9 +1,10 @@
 <template>
   <div class="detailss">
     <h1>{{ news.title }}</h1>
-    <img :src="news.images" :alt="news.title">
-    <p>{{ news.news_date }}</p>
-    <p>{{ news.text }}</p>
+    <p class="date_details">{{ news.news_date }}</p>
+    <p class="detail_text">{{ news.text }}</p>
+    <img class="detailsimg" :src="news.images" :alt="news.title">
+
   </div>
 </template>
 
@@ -26,7 +27,7 @@ export default {
     axios.get(`http://localhost:3000/news/${id}`)
       .then(response => {
         this.news = response.data;
-        // this.news.images= this.news.images.split()        
+        this.news.images = response.data.images.map(image => `data:image/png;base64, ${image}`).join(',');       
         console.log(this.news)
       })
       .catch(error => {
@@ -35,10 +36,5 @@ export default {
   }
 };
 </script>
-<style>
-.detailss{
-  margin-top: 250px;
-}
-</style>
 
 

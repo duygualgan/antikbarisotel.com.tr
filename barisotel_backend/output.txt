@@ -1,4 +1,195 @@
 Now listening on port 3000
 Connected to MySQL database!
-Veritabanına bağlandı. Bağlantı kimliği: 49
-::ffff:127.0.0.1 - - [14/Mar/2023:21:53:29 +0000] "GET /news/28 HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0"
+Veritabanına bağlandı. Bağlantı kimliği: 19
+[
+  RowDataPacket {
+    id: 31,
+    title: 'haberler bişiler ',
+    images: 'images/3736364e-f2b1-4701-a639-179bbbfef5fd.jpeg',
+    news_date: 2023-03-14T21:00:00.000Z,
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like \r\n"
+  },
+  RowDataPacket {
+    id: 30,
+    title: 'haberler bişiler ',
+    images: 'images/9ccea17e-962a-4285-9bbd-d407bbb41fe0.jpeg',
+    news_date: 2023-03-14T21:00:00.000Z,
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like \r\n"
+  },
+  RowDataPacket {
+    id: 29,
+    title: 'rthbsdfthtr',
+    images: 'images/ba652d7e-5c4a-43af-aeca-2d44f04b8952.jpeg',
+    news_date: 2023-03-16T21:00:00.000Z,
+    text: 'rtbdftgbrtb'
+  },
+  RowDataPacket {
+    id: 28,
+    title: 'duygu haber',
+    images: 'images/176f70d2-a851-4f0d-ba7e-195fa0efa8f0.jpeg',
+    news_date: 2023-03-11T21:00:00.000Z,
+    text: 'duygu'
+  }
+]
+::ffff:127.0.0.1 - - [15/Mar/2023:11:27:10 +0000] "GET /status HTTP/1.1" 200 135175 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0"
+::ffff:127.0.0.1 - - [15/Mar/2023:11:27:45 +0000] "GET /news/31 HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0"
+[
+  RowDataPacket {
+    id: 31,
+    title: 'haberler bişiler ',
+    images: 'images/3736364e-f2b1-4701-a639-179bbbfef5fd.jpeg',
+    news_date: 2023-03-14T21:00:00.000Z,
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like \r\n"
+  },
+  RowDataPacket {
+    id: 30,
+    title: 'haberler bişiler ',
+    images: 'images/9ccea17e-962a-4285-9bbd-d407bbb41fe0.jpeg',
+    news_date: 2023-03-14T21:00:00.000Z,
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like \r\n"
+  },
+  RowDataPacket {
+    id: 29,
+    title: 'rthbsdfthtr',
+    images: 'images/ba652d7e-5c4a-43af-aeca-2d44f04b8952.jpeg',
+    news_date: 2023-03-16T21:00:00.000Z,
+    text: 'rtbdftgbrtb'
+  },
+  RowDataPacket {
+    id: 28,
+    title: 'duygu haber',
+    images: 'images/176f70d2-a851-4f0d-ba7e-195fa0efa8f0.jpeg',
+    news_date: 2023-03-11T21:00:00.000Z,
+    text: 'duygu'
+  }
+]
+::ffff:127.0.0.1 - - [15/Mar/2023:11:27:48 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0"
+::ffff:127.0.0.1 - - [15/Mar/2023:11:27:51 +0000] "GET /news/30 HTTP/1.1" 200 16829 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0"
+[
+  RowDataPacket {
+    id: 31,
+    title: 'haberler bişiler ',
+    images: 'images/3736364e-f2b1-4701-a639-179bbbfef5fd.jpeg',
+    news_date: 2023-03-14T21:00:00.000Z,
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like \r\n"
+  },
+  RowDataPacket {
+    id: 30,
+    title: 'haberler bişiler ',
+    images: 'images/9ccea17e-962a-4285-9bbd-d407bbb41fe0.jpeg',
+    news_date: 2023-03-14T21:00:00.000Z,
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like \r\n"
+  },
+  RowDataPacket {
+    id: 29,
+    title: 'rthbsdfthtr',
+    images: 'images/ba652d7e-5c4a-43af-aeca-2d44f04b8952.jpeg',
+    news_date: 2023-03-16T21:00:00.000Z,
+    text: 'rtbdftgbrtb'
+  },
+  RowDataPacket {
+    id: 28,
+    title: 'duygu haber',
+    images: 'images/176f70d2-a851-4f0d-ba7e-195fa0efa8f0.jpeg',
+    news_date: 2023-03-11T21:00:00.000Z,
+    text: 'duygu'
+  }
+]
+::ffff:127.0.0.1 - - [15/Mar/2023:11:27:55 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0"
+::ffff:127.0.0.1 - - [15/Mar/2023:11:28:20 +0000] "GET /news/30 HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0"
+::ffff:127.0.0.1 - - [15/Mar/2023:13:22:59 +0000] "GET /news/31 HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0"
+[
+  RowDataPacket {
+    id: 31,
+    title: 'haberler bişiler ',
+    images: 'images/3736364e-f2b1-4701-a639-179bbbfef5fd.jpeg',
+    news_date: 2023-03-14T21:00:00.000Z,
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like \r\n"
+  },
+  RowDataPacket {
+    id: 30,
+    title: 'haberler bişiler ',
+    images: 'images/9ccea17e-962a-4285-9bbd-d407bbb41fe0.jpeg',
+    news_date: 2023-03-14T21:00:00.000Z,
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like \r\n"
+  },
+  RowDataPacket {
+    id: 29,
+    title: 'rthbsdfthtr',
+    images: 'images/ba652d7e-5c4a-43af-aeca-2d44f04b8952.jpeg',
+    news_date: 2023-03-16T21:00:00.000Z,
+    text: 'rtbdftgbrtb'
+  },
+  RowDataPacket {
+    id: 28,
+    title: 'duygu haber',
+    images: 'images/176f70d2-a851-4f0d-ba7e-195fa0efa8f0.jpeg',
+    news_date: 2023-03-11T21:00:00.000Z,
+    text: 'duygu'
+  }
+]
+::ffff:127.0.0.1 - - [15/Mar/2023:13:23:02 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0"
+::ffff:127.0.0.1 - - [15/Mar/2023:13:23:11 +0000] "GET /news/31 HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0"
+[
+  RowDataPacket {
+    id: 31,
+    title: 'haberler bişiler ',
+    images: 'images/3736364e-f2b1-4701-a639-179bbbfef5fd.jpeg',
+    news_date: 2023-03-14T21:00:00.000Z,
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like \r\n"
+  },
+  RowDataPacket {
+    id: 30,
+    title: 'haberler bişiler ',
+    images: 'images/9ccea17e-962a-4285-9bbd-d407bbb41fe0.jpeg',
+    news_date: 2023-03-14T21:00:00.000Z,
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like \r\n"
+  },
+  RowDataPacket {
+    id: 29,
+    title: 'rthbsdfthtr',
+    images: 'images/ba652d7e-5c4a-43af-aeca-2d44f04b8952.jpeg',
+    news_date: 2023-03-16T21:00:00.000Z,
+    text: 'rtbdftgbrtb'
+  },
+  RowDataPacket {
+    id: 28,
+    title: 'duygu haber',
+    images: 'images/176f70d2-a851-4f0d-ba7e-195fa0efa8f0.jpeg',
+    news_date: 2023-03-11T21:00:00.000Z,
+    text: 'duygu'
+  }
+]
+::ffff:127.0.0.1 - - [15/Mar/2023:13:23:55 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0"
+::ffff:127.0.0.1 - - [15/Mar/2023:13:24:28 +0000] "GET /news/30 HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0"
+[
+  RowDataPacket {
+    id: 31,
+    title: 'haberler bişiler ',
+    images: 'images/3736364e-f2b1-4701-a639-179bbbfef5fd.jpeg',
+    news_date: 2023-03-14T21:00:00.000Z,
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like \r\n"
+  },
+  RowDataPacket {
+    id: 30,
+    title: 'haberler bişiler ',
+    images: 'images/9ccea17e-962a-4285-9bbd-d407bbb41fe0.jpeg',
+    news_date: 2023-03-14T21:00:00.000Z,
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like \r\n"
+  },
+  RowDataPacket {
+    id: 29,
+    title: 'rthbsdfthtr',
+    images: 'images/ba652d7e-5c4a-43af-aeca-2d44f04b8952.jpeg',
+    news_date: 2023-03-16T21:00:00.000Z,
+    text: 'rtbdftgbrtb'
+  },
+  RowDataPacket {
+    id: 28,
+    title: 'duygu haber',
+    images: 'images/176f70d2-a851-4f0d-ba7e-195fa0efa8f0.jpeg',
+    news_date: 2023-03-11T21:00:00.000Z,
+    text: 'duygu'
+  }
+]
+::ffff:127.0.0.1 - - [15/Mar/2023:13:25:50 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0"

@@ -1218,3 +1218,29 @@ form button[type="submit"]:hover {
     border: 1px solid var(--red);
   }
 
+/* NEWS DETAİLS*/
+.detailss{
+    margin-top: 150px;
+    width: 70%;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+.detailss h1{
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: 28px;
+    text-align: center;
+}
+.date_details{
+    text-align: end;
+}
+.detail_text{
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.detailsimg{
+    width: 350px;
+    max-height: 350px;
+    margin-top: 20px;
+}

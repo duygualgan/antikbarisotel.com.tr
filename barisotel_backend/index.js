@@ -48,7 +48,7 @@ app.get("/status", async (req, res)  => {
     const query = util.promisify(connection.query).bind(connection);
 
   let result = await query(
-    "SELECT * FROM news"
+    "SELECT * FROM news ORDER BY id DESC "
     );
     console.log(result)
     result.forEach(item => {
@@ -122,9 +122,29 @@ app.post('/api/news', upload.single('images'), async (req, res) => {
 });
 
 
+// app.get('/news/:id', (req, res) => {
+//   const id = req.params.id;
+//   const query = ('SELECT * FROM news WHERE id = ?');
+//   connection.query(query, [id], (err, results, fields) => {
+//     if (err) {
+//       console.error('MySQL error: ' + err.stack);
+//       res.status(500).json({ error: 'An error occurred while retrieving news details' });
+//       return;
+//     }
+
+//     if (results.length > 0) {
+//       res.json(results[0]);
+//     } else {
+//       res.status(404).json({ error: 'News not found' });
+//     }
+//   });
+// });
+
+
+
 app.get('/news/:id', (req, res) => {
   const id = req.params.id;
-  // MySQL'den haber detayını sorgula
+
   const query = ('SELECT * FROM news WHERE id = ?');
   connection.query(query, [id], (err, results, fields) => {
     if (err) {
@@ -132,15 +152,40 @@ app.get('/news/:id', (req, res) => {
       res.status(500).json({ error: 'An error occurred while retrieving news details' });
       return;
     }
-
-    // Haber detaylarını JSON formatında döndür
+    
     if (results.length > 0) {
-      res.json(results[0]);
+
+      const images = results[0].images.split(',');
+      const imagePromises = images.map(imagePath => {
+        return new Promise((resolve, reject) => {
+          fs.readFile(imagePath, { encoding: 'base64' }, (err, data) => {
+            if (err) {
+              reject(err);
+            } else {
+              resolve(data);
+            }
+          });
+        });
+      });
+      
+      Promise.all(imagePromises)
+        .then(imageData => {
+          results[0].images = imageData;
+          res.json(results[0]);
+        })
+        .catch(err => {
+          console.error('Error while reading images: ' + err);
+          res.status(500).json({ error: 'An error occurred while retrieving news details' });
+        });
+      
     } else {
       res.status(404).json({ error: 'News not found' });
     }
   });
 });
+
+
+
 
 app.listen(port, () => {
   console.log(`Now listening on port ${port}`);
