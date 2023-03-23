@@ -31,9 +31,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "contact" */ '../views/ServicesPage.vue')
   },
   {
-    path: '/admin',
-    name: 'adminPage',
-    component: () => import(/* webpackChunkName: "contact" */ '../views/adminPage.vue')
+    path: '/addNews',
+    name: 'addNews',
+    component: () => import(/* webpackChunkName: "contact" */ '../views/addNews.vue')
   },
   {
     path: '/news',
@@ -44,6 +44,21 @@ const routes = [
     path: "/news/:id",
     name: "newsDetails",
     component: () => import(/* webpackChunkName: "contact" */ '../views/detailsNews.vue')  
+  },
+  {
+    path: "/admin",
+    name: "adminPage",
+    component: () => import(/* webpackChunkName: "contact" */ '../views/adminPage.vue')  
+  },
+  {
+    path: "/haberler",
+    name: "haberler",
+    component: () => import(/* webpackChunkName: "contact" */ '../views/haberlerPage.vue')  
+  },
+  {
+    path: "/edit",
+    name: "edit",
+    component: () => import(/* webpackChunkName: "contact" */ '../views/addNews.vue')  
   },
 ]
 

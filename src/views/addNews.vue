@@ -1,16 +1,16 @@
 <script>
-import Admin from '../components/adminPage.vue'
+import addNews from '../components/addNews.vue'
 
 
 export default {
   name: 'ContactPage',
   components: {
-    Admin
+    addNews
   }
 }
 </script>
 
 
 <template>
-  <Admin></Admin>
+  <addNews></addNews>
 </template>

@@ -1,16 +1,16 @@
 <script>
-import Admin from '../components/adminPage.vue'
+import haberler from '../components/haberlerEdit.vue'
 
 
 export default {
   name: 'ContactPage',
   components: {
-    Admin
+    haberler
   }
 }
 </script>
 
 
 <template>
-  <Admin></Admin>
+  <haberler></haberler>
 </template>
