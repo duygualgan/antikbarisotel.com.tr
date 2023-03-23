@@ -1,135 +1,6 @@
 Now listening on port 3000
 Connected to MySQL database!
-Veritabanına bağlandı. Bağlantı kimliği: 17
-[
-  RowDataPacket {
-    id: 32,
-    title: 'erdvkemrmedesavmvkmradc5v',
-    images: 'images/ff3dc0f1-cdea-495a-846e-fed770a89487.jpeg',
-    news_date: 2023-03-24T21:00:00.000Z,
-    text: 'ervbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'
-  }
-]
-::ffff:127.0.0.1 - - [23/Mar/2023:13:40:59 +0000] "GET /status HTTP/1.1" 200 84912 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-::ffff:127.0.0.1 - - [23/Mar/2023:13:41:01 +0000] "OPTIONS /silHaber/32 HTTP/1.1" 204 0 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-::ffff:127.0.0.1 - - [23/Mar/2023:13:41:01 +0000] "DELETE /silHaber/32 HTTP/1.1" 200 40 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-Haber başarıyla eklendi!
-OkPacket {
-  fieldCount: 0,
-  affectedRows: 1,
-  insertId: 33,
-  serverStatus: 2,
-  warningCount: 0,
-  message: '',
-  protocol41: true,
-  changedRows: 0
-}
-::ffff:127.0.0.1 - - [23/Mar/2023:13:41:25 +0000] "POST /api/news HTTP/1.1" 201 40 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-Haber başarıyla eklendi!
-OkPacket {
-  fieldCount: 0,
-  affectedRows: 1,
-  insertId: 34,
-  serverStatus: 2,
-  warningCount: 0,
-  message: '',
-  protocol41: true,
-  changedRows: 0
-}
-::ffff:127.0.0.1 - - [23/Mar/2023:13:41:28 +0000] "POST /api/news HTTP/1.1" 201 40 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-[
-  RowDataPacket {
-    id: 34,
-    title: 'reverwvrereerberbveravzsrbesrv',
-    images: 'images/8eb39545-85ec-4cb4-8282-34f93387eade.jpeg',
-    news_date: 2023-03-23T21:00:00.000Z,
-    text: 'rbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr'
-  },
-  RowDataPacket {
-    id: 33,
-    title: 'reverwvrereerberbveravzsrbesrv',
-    images: 'images/edb491a8-2831-44fc-b620-4d5b552c6dd4.jpeg',
-    news_date: 2023-03-23T21:00:00.000Z,
-    text: 'rbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr'
-  }
-]
-::ffff:127.0.0.1 - - [23/Mar/2023:13:41:34 +0000] "GET /status HTTP/1.1" 200 169859 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-[
-  RowDataPacket {
-    id: 34,
-    title: 'reverwvrereerberbveravzsrbesrv',
-    images: 'images/8eb39545-85ec-4cb4-8282-34f93387eade.jpeg',
-    news_date: 2023-03-23T21:00:00.000Z,
-    text: 'rbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr'
-  },
-  RowDataPacket {
-    id: 33,
-    title: 'reverwvrereerberbveravzsrbesrv',
-    images: 'images/edb491a8-2831-44fc-b620-4d5b552c6dd4.jpeg',
-    news_date: 2023-03-23T21:00:00.000Z,
-    text: 'rbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr'
-  }
-]
-::ffff:127.0.0.1 - - [23/Mar/2023:13:41:39 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-[
-  RowDataPacket {
-    id: 34,
-    title: 'reverwvrereerberbveravzsrbesrv',
-    images: 'images/8eb39545-85ec-4cb4-8282-34f93387eade.jpeg',
-    news_date: 2023-03-23T21:00:00.000Z,
-    text: 'rbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr'
-  },
-  RowDataPacket {
-    id: 33,
-    title: 'reverwvrereerberbveravzsrbesrv',
-    images: 'images/edb491a8-2831-44fc-b620-4d5b552c6dd4.jpeg',
-    news_date: 2023-03-23T21:00:00.000Z,
-    text: 'rbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr'
-  }
-]
-::ffff:127.0.0.1 - - [23/Mar/2023:13:58:42 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-::ffff:127.0.0.1 - - [23/Mar/2023:13:58:53 +0000] "OPTIONS /news/34 HTTP/1.1" 204 0 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-::ffff:127.0.0.1 - - [23/Mar/2023:13:58:53 +0000] "DELETE /news/34 HTTP/1.1" 404 149 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-[
-  RowDataPacket {
-    id: 34,
-    title: 'reverwvrereerberbveravzsrbesrv',
-    images: 'images/8eb39545-85ec-4cb4-8282-34f93387eade.jpeg',
-    news_date: 2023-03-23T21:00:00.000Z,
-    text: 'rbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr'
-  },
-  RowDataPacket {
-    id: 33,
-    title: 'reverwvrereerberbveravzsrbesrv',
-    images: 'images/edb491a8-2831-44fc-b620-4d5b552c6dd4.jpeg',
-    news_date: 2023-03-23T21:00:00.000Z,
-    text: 'rbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr'
-  }
-]
-::ffff:127.0.0.1 - - [23/Mar/2023:13:58:58 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-::ffff:127.0.0.1 - - [23/Mar/2023:13:59:03 +0000] "OPTIONS /news/34 HTTP/1.1" 204 0 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-::ffff:127.0.0.1 - - [23/Mar/2023:13:59:03 +0000] "DELETE /news/34 HTTP/1.1" 404 149 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-::ffff:127.0.0.1 - - [23/Mar/2023:13:59:46 +0000] "OPTIONS /news/34 HTTP/1.1" 204 0 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-::ffff:127.0.0.1 - - [23/Mar/2023:13:59:46 +0000] "DELETE /news/34 HTTP/1.1" 404 149 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-[
-  RowDataPacket {
-    id: 34,
-    title: 'reverwvrereerberbveravzsrbesrv',
-    images: 'images/8eb39545-85ec-4cb4-8282-34f93387eade.jpeg',
-    news_date: 2023-03-23T21:00:00.000Z,
-    text: 'rbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr'
-  },
-  RowDataPacket {
-    id: 33,
-    title: 'reverwvrereerberbveravzsrbesrv',
-    images: 'images/edb491a8-2831-44fc-b620-4d5b552c6dd4.jpeg',
-    news_date: 2023-03-23T21:00:00.000Z,
-    text: 'rbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr'
-  }
-]
-::ffff:127.0.0.1 - - [23/Mar/2023:14:00:47 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-::ffff:127.0.0.1 - - [23/Mar/2023:14:00:53 +0000] "OPTIONS /silHaber/34 HTTP/1.1" 204 0 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
-::ffff:127.0.0.1 - - [23/Mar/2023:14:00:53 +0000] "DELETE /silHaber/34 HTTP/1.1" 200 40 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+Veritabanına bağlandı. Bağlantı kimliği: 18
 [
   RowDataPacket {
     id: 33,
@@ -139,7 +10,7 @@ OkPacket {
     text: 'rbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr'
   }
 ]
-::ffff:127.0.0.1 - - [23/Mar/2023:14:03:52 +0000] "GET /status HTTP/1.1" 200 84930 "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+::ffff:127.0.0.1 - - [23/Mar/2023:14:41:47 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
 [
   RowDataPacket {
     id: 33,
@@ -149,7 +20,7 @@ OkPacket {
     text: 'rbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr'
   }
 ]
-::ffff:127.0.0.1 - - [23/Mar/2023:14:03:52 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+::ffff:127.0.0.1 - - [23/Mar/2023:15:29:22 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
 [
   RowDataPacket {
     id: 33,
@@ -159,4 +30,4 @@ OkPacket {
     text: 'rbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr'
   }
 ]
-::ffff:127.0.0.1 - - [23/Mar/2023:14:12:11 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+::ffff:127.0.0.1 - - [23/Mar/2023:15:29:29 +0000] "GET /status HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"

@@ -186,23 +186,6 @@ app.get('/news/:id', (req, res) => {
   });
 });
 
-
-
-
-
-app.post('/confirm-delete/:id', (req, res, next) => {
-  const id = req.params.id;
-  res.send(`
-    <form method="post" action="/silHaber/${id}">
-      <p>Silmek istediğinizden emin misiniz?</p>
-      <input type="submit" value="Evet">
-      <button type="button" onclick="window.history.back()">Hayır</button>
-    </form>
-  `);
-  next();
-});
-
-
 app.delete('/silHaber/:id', (req, res) => {
   const id = req.params.id;
 
@@ -217,22 +200,6 @@ app.delete('/silHaber/:id', (req, res) => {
   });
 });
 
-// app.delete('/silHaber/:id', (req, res) => {
-//   const id = req.params.id;
-//   const query = 'DELETE FROM news WHERE id = ?';
-//   connection.query(query, [id], (err, results, fields) => {
-//     if (err) {
-//       console.error('MySQL error: ' + err.stack);
-//       res.status(500).json({ error: 'An error occurred while deleting the news' });
-//       return;
-//     }
-//     if (results.affectedRows > 0) {
-//       res.json({ message: 'News deleted successfully' });
-//     } else {
-//       res.status(404).json({ error: 'News not found' });
-//     }
-//     });
-// });
 
 
 
