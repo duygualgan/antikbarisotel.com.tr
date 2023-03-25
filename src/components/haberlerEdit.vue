@@ -8,7 +8,7 @@
             <p>{{ news.text }}</p>
           </div>
           <div class="news-buttons">
-            <router-link :to="{ name: 'edit', params: { id: news.id } }"> edit </router-link>
+            <router-link :to="{ name: 'edit', params: { id: news.id } }"> Edit </router-link>
             <button @click="silHaber(news)">Sil</button>
           </div>
         </div>

@@ -13,7 +13,8 @@
       <textarea id="text" v-model="news.text" required></textarea>
 
       <label for="images">Haber Resmi</label>
-      <input type="file" id="images" @change="onImageChange">
+      <input type="file" id="images" ref="fileInput" @change="onImageChange">
+      <img ref="imagePreview" style="max-width: 300px; max-height: 300px;">
 
       <button type="submit">Kaydet</button>
     </form>
@@ -47,10 +48,10 @@ export default {
 
       try {
 
-        await axios.post('http://localhost:3000/api/news', formData,{
+        await axios.post('http://localhost:3000/api/news', formData, {
           headers: {
-      'Content-Type': 'multipart/form-data'
-    }
+            'Content-Type': 'multipart/form-data'
+          }
         })
         alert('Haber kaydedildi.')
       } catch (error) {
@@ -59,8 +60,16 @@ export default {
       }
     },
     onImageChange(event) {
-      this.news.images = event.target.files[0]
-    }
+      const file = event.target.files[0];
+      this.news.images = file;
+
+      // Görüntüyü önizleme alanında göstermek için
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        this.$refs.imagePreview.src = reader.result;
+      };
+    },
   }
 }
 </script>

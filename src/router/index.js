@@ -56,9 +56,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "contact" */ '../views/haberlerPage.vue')  
   },
   {
-    path: "/edit",
+    path: "/api/haberler/:id",
     name: "edit",
-    component: () => import(/* webpackChunkName: "contact" */ '../views/addNews.vue')  
+    component: () => import(/* webpackChunkName: "contact" */ '../views/EditNews.vue')  
   },
 ]
 
