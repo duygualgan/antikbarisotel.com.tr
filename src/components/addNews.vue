@@ -38,17 +38,18 @@ export default {
   methods: {
     async saveNews() {
 
-      const formData = new FormData()
-      formData.append('title', this.news.title)
-      formData.append('news_date', this.news.news_date)
-      formData.append('text', this.news.text)
-      formData.append('images', this.news.images)
+      // const formData = new FormData()
+      // formData.append('title', this.news.title)
+      // formData.append('news_date', this.news.news_date)
+      // formData.append('text', this.news.text)
+      // formData.append('images', this.news.images);
 
-      console.log(formData)
+
+      // console.log(formData)
 
       try {
 
-        await axios.post('http://localhost:3000/api/news', formData, {
+        await axios.post('http://localhost:3000/api/news', this.news, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }

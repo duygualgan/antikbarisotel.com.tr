@@ -6,6 +6,7 @@
           <div class="news-text">
             <h2>{{ news.title }}</h2>
             <p>{{ news.text }}</p>
+            <img class="newsimg" :src="news.images" :alt="news.title">
           </div>
           <div class="news-buttons">
             <router-link :to="{ name: 'edit', params: { id: news.id } }"> Edit </router-link>
@@ -50,7 +51,8 @@ export default {
           return {
             id: item.id,
             text: item.text,
-            title: item.title
+            title: item.title,
+            images: `data:image/png;base64, ${item.imageAsBase64}`
           };
         });
         console.log(news);

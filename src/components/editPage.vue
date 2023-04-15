@@ -1,4 +1,3 @@
-<label for="images">Haber Resmi</label>
 <template>
     <div class="add-news">
         <h2>Haber güncelle</h2>
@@ -8,22 +7,20 @@
             <input type="text" id="title" v-model="news.title" required>
 
             <label for="date">Haber Tarihi</label>
-            <input type="date" id="date" v-model="news.news_date" required>
+            <input type="date" id="date" v-model="news.news_date" name="news_date" required>
 
             <label for="text">Haber Metini</label>
             <textarea id="text" v-model="news.text" required></textarea>
 
-
-            <img class="detailsimg" :src="news.images" :alt="news.title">
-
-
             <label for="images">Haber Resmi</label>
-            <input type="file" id="images" @change="onImageChange">
+            <!-- <img id="oldImage" class="detailsimg" :src="news.images" :alt="news.title"> -->
+            <input type="file" id="images" name="images" @change="onImageChange">
+
 
             <button type="submit">güncelle</button>
         </form>
     </div>
-</template>  
+</template>
   
 <script>
 import axios from 'axios';
@@ -36,7 +33,7 @@ export default {
                 title: '',
                 news_date: '',
                 text: '',
-                image: '',
+                images: ''
             },
         };
     },
@@ -48,46 +45,85 @@ export default {
             axios.get(`http://localhost:3000/news/${id}`)
                 .then(response => {
                     this.news = response.data;
-                    this.news.images = response.data.images.map(image => `data:image/png;base64, ${image}`).join(',');
+                    this.news.news_date = new Date(response.data.news_date).toISOString().substr(0, 10);
+                    this.news.images = response.data.images.map(images => `data:image/png;base64, ${images}`).join(',');
                     console.log(this.news)
                 })
                 .catch(error => console.error(error));
         },
-        updateNews() {
-            // Haber verilerini günceller.
-            fetch(`/api/news/${this.newsId}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(this.news),
-            })
-                .then(response => {
-                    if (response.ok) {
-                        // Güncelleme işlemi başarılı olduğunda haber listesi sayfasına yönlendirir.
-                        this.$router.push('/haberler');
-                    } else {
-                        throw new Error('Something went wrong');
+
+        async updateNews() {
+
+            const formData = new FormData()
+            formData.append('title', this.news.title)
+            formData.append('news_date', this.news.news_date)
+            formData.append('text', this.news.text)
+            formData.append('images', this.news.images);
+            try {
+
+                await axios.put(`http://localhost:3000/update-news/${this.newsId}`, FormData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
                     }
                 })
-                .catch(error => console.error(error));
+                alert('Haber update edildi.')
+            } catch (error) {
+                console.log(error)
+                alert('Haber kaydedilemedi.')
+            }
         },
+
+
+        // updateNews() {
+        //     // Haber verilerini günceller.
+        //     await axios.put(`http://localhost:3000/update-news/${this.newsId}`, news{
+        //         method: 'PUT',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify(this.news),
+        //     })
+        //         .then(response => {
+        //             if (response.ok) {
+        //                 // Güncelleme işlemi başarılı olduğunda haber listesi sayfasına yönlendirir.
+        //                 this.$router.push('/haberler');
+        //             } else {
+        //                 throw new Error('Something went wrong');
+        //             }
+        //         })
+        //         .catch(error => console.error(error));
+        // },
         onImageChange(event) {
-            // Seçilen resmi base64 formatına dönüştürür.
             const file = event.target.files[0];
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                this.news.image = reader.result;
-            };
-            reader.readAsDataURL(file);
-        },
+            this.news.images = file;
+
+            // const formData = new FormData();
+
+            // // this.news nesnesinin tüm özelliklerini FormData nesnesine ekleyin
+            // formData.append('title', this.news.title);
+            // formData.append('news_date', this.news.news_date);
+            // formData.append('text', this.news.text);
+            // formData.append('images', file);
+
+            // this.news nesnesinin images özelliğini de güncelleyin
+            // this.news.images = URL.createObjectURL(file);
+
+            // console.log(formData);
+
+
+            // // FileReader 
+            // const reader = new FileReader();
+            // reader.onload = (event) => {
+            //     console.log(event.target.result);
+            // };
+            // reader.readAsDataURL(file);
+        }
+
     },
     created() {
-        // Edit sayfası açıldığında ilgili haberin id'sini alır.
         this.newsId = this.$route.params.id;
-        // İlgili haberin verilerini getirir.
         this.getNews();
     },
 };
 </script>
-  
+
