@@ -16,6 +16,16 @@
       <input type="file" id="images" ref="fileInput" @change="onImageChange">
       <img ref="imagePreview" style="max-width: 300px; max-height: 300px;">
 
+      <div>
+        <label for="secondaryImages">Diğer Resimler</label>
+        <input type="file" id="secondaryImages" ref="secondaryFileInput" @change="onSecondaryImageChange" multiple>
+        <div v-if="news.secondaryImages.length">
+          <div v-for="(image, index) in news.secondaryImages" :key="index">
+            <img :src="image.url" style="max-width: 300px; max-height: 300px;">
+          </div>
+        </div>
+      </div>
+
       <button type="submit">Kaydet</button>
     </form>
   </div>
@@ -31,25 +41,36 @@ export default {
         title: '',
         news_date: '',
         text: '',
-        images: null
+        images: null,
+        secondaryImages: []
       }
     }
   },
   methods: {
     async saveNews() {
 
-      // const formData = new FormData()
-      // formData.append('title', this.news.title)
-      // formData.append('news_date', this.news.news_date)
-      // formData.append('text', this.news.text)
-      // formData.append('images', this.news.images);
+      const formData = new FormData()
+      formData.append('title', this.news.title)
+      formData.append('news_date', this.news.news_date)
+      formData.append('text', this.news.text)
+      formData.append('images', this.news.images);
+      
 
+      // Birden fazla resim seçilmişse, her bir resmi formData'ya ekleyin
+if (this.news.images && this.news.images.length) {
+  for (let i = 0; i < this.news.images.length; i++) {
+    formData.append('images[]', this.news.images[i]);
+  }
+} else if (this.news.images) {
+  // Tek resim seçilmişse, formData'ya yalnızca bir resim ekleyin
+  formData.append('images', this.news.images);
+}
 
       // console.log(formData)
 
       try {
 
-        await axios.post('http://localhost:3000/api/news', this.news, {
+        await axios.post('http://localhost:3000/api/news',formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
@@ -71,6 +92,18 @@ export default {
         this.$refs.imagePreview.src = reader.result;
       };
     },
+    onSecondaryImageChange(event) {
+      const files = event.target.files;
+      for (let i = 0; i < files.length; i++) {  
+        const file = files[i];
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => {
+          this.news.secondaryImages.push(reader.result);
+        };
+      }
+    },
   }
 }
 </script>
+

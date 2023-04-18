@@ -13,7 +13,7 @@
             <textarea id="text" v-model="news.text" required></textarea>
 
             <label for="images">Haber Resmi</label>
-            <!-- <img id="oldImage" class="detailsimg" :src="news.images" :alt="news.title"> -->
+            <img id="oldImage" class="detailsimg" :src="news.old_images" :alt="news.title">
             <input type="file" id="images" name="images" @change="onImageChange">
 
 
@@ -39,85 +39,47 @@ export default {
     },
     methods: {
         getNews() {
-            // Edit sayfası açıldığında ilgili haberin verilerini getirir.
             const id = this.$route.params.id;
 
             axios.get(`http://localhost:3000/news/${id}`)
                 .then(response => {
-                    this.news = response.data;
+                    console.log(response.data)
+                    this.news.title = response.data.title
+                    this.news.text = response.data.text
                     this.news.news_date = new Date(response.data.news_date).toISOString().substr(0, 10);
-                    this.news.images = response.data.images.map(images => `data:image/png;base64, ${images}`).join(',');
+                    this.news.old_images = response.data.images.map(images => `data:image/png;base64, ${images}`).join(',');
+                    this.news.old_imagePath = response.data.imagePath
                     console.log(this.news)
                 })
                 .catch(error => console.error(error));
         },
-
-        async updateNews() {
-
-            const formData = new FormData()
-            formData.append('title', this.news.title)
-            formData.append('news_date', this.news.news_date)
-            formData.append('text', this.news.text)
+        updateNews() {
+            const formData = new FormData();
+            formData.append('title', this.news.title);
+            formData.append('news_date', this.news.news_date);
+            formData.append('text', this.news.text);
             formData.append('images', this.news.images);
-            try {
-
-                await axios.put(`http://localhost:3000/update-news/${this.newsId}`, FormData, {
-                    headers: {
-                        'Content-Type': 'multipart/form-data'
-                    }
+            formData.append('old_imagePath', this.news.old_imagePath);
+            console.log(formData)
+            axios.put(`http://localhost:3000/update-news/${this.newsId}`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
+                .then(response => {
+                    console.log(response.data);
+                    this.$router.push('/haberler');
                 })
-                alert('Haber update edildi.')
-            } catch (error) {
-                console.log(error)
-                alert('Haber kaydedilemedi.')
-            }
+                .catch(error => console.error(error));
         },
 
-
-        // updateNews() {
-        //     // Haber verilerini günceller.
-        //     await axios.put(`http://localhost:3000/update-news/${this.newsId}`, news{
-        //         method: 'PUT',
-        //         headers: {
-        //             'Content-Type': 'application/json',
-        //         },
-        //         body: JSON.stringify(this.news),
-        //     })
-        //         .then(response => {
-        //             if (response.ok) {
-        //                 // Güncelleme işlemi başarılı olduğunda haber listesi sayfasına yönlendirir.
-        //                 this.$router.push('/haberler');
-        //             } else {
-        //                 throw new Error('Something went wrong');
-        //             }
-        //         })
-        //         .catch(error => console.error(error));
-        // },
         onImageChange(event) {
             const file = event.target.files[0];
             this.news.images = file;
-
-            // const formData = new FormData();
-
-            // // this.news nesnesinin tüm özelliklerini FormData nesnesine ekleyin
-            // formData.append('title', this.news.title);
-            // formData.append('news_date', this.news.news_date);
-            // formData.append('text', this.news.text);
-            // formData.append('images', file);
-
-            // this.news nesnesinin images özelliğini de güncelleyin
-            // this.news.images = URL.createObjectURL(file);
-
-            // console.log(formData);
+            console.log(this.news.images)
+        },
 
 
-            // // FileReader 
-            // const reader = new FileReader();
-            // reader.onload = (event) => {
-            //     console.log(event.target.result);
-            // };
-            // reader.readAsDataURL(file);
-        }
 
     },
     created() {
