@@ -24,7 +24,7 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      news_gallery: [],
+      news_gallery: [], // news_gallery'i boş bir dizi olarak başlatın
       news: {
         title: '',
         images: '',
@@ -38,20 +38,24 @@ export default {
     const id = this.$route.params.id;
     axios.get(`http://localhost:3000/news/${id}`)
       .then(response => {
-        console.log("duygu")
+        console.log("duygu");
         console.log(response.data);
+
         this.news = response.data;
-        this.news.images = `data:image/png;base64, ${response.data.images}`;
+        this.news.images = response.data.images.map(image => `data:image/png;base64, ${image}`).join(',');
         this.news_gallery = response.data.gallery_image.map(image => ({
-          gallery_image: `data:image/png;base64, ${image}`
+          gallery_image: `data:image/png;base64, ${image.gallery_image}`
         }));
+
+
         console.log(this.news);
-        console.log(response.data);
+        console.log(this.news_gallery);
+        console.log("this");
+        console.log("this22");
       })
       .catch(error => {
         console.log(error);
       });
-
   }
 };
 </script>
