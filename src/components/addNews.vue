@@ -58,7 +58,6 @@ export default {
           }
         })
         .then(response => {
-        // Haber başarıyla kaydedildi, galeri sayfasına yönlendir
         this.$router.push('/galeri/' + response.data.newsId)
       })
       .catch(error => {

@@ -8,6 +8,13 @@
     <p class="detail_text">{{ news.details }}</p>
     <img class="detailsimg" :src="news.images" :alt="news.title">
 
+    <!-- Galeri Resimleri -->
+    <!-- <div class="gallery">
+      <img v-for="(image, index) in news_gallery" :src="image.gallery_image" :alt="'Image ' + (index + 1)" :key="index" />
+    </div> -->
+    <div v-for="(image, index) in news_gallery" :key="index">
+      <img :src="image.gallery_image" style="max-width: 300px; max-height: 300px;">
+    </div>
   </div>
 </template>
 
@@ -17,6 +24,7 @@ import axios from 'axios';
 export default {
   data() {
     return {
+      news_gallery: [],
       news: {
         title: '',
         images: '',
@@ -30,15 +38,20 @@ export default {
     const id = this.$route.params.id;
     axios.get(`http://localhost:3000/news/${id}`)
       .then(response => {
+        console.log("duygu")
+        console.log(response.data);
         this.news = response.data;
-        this.news.images = response.data.images.map(image => `data:image/png;base64, ${image}`).join(',');       
-        console.log(this.news)
+        this.news.images = `data:image/png;base64, ${response.data.images}`;
+        this.news_gallery = response.data.gallery_image.map(image => ({
+          gallery_image: `data:image/png;base64, ${image}`
+        }));
+        console.log(this.news);
+        console.log(response.data);
       })
       .catch(error => {
         console.log(error);
       });
+
   }
 };
 </script>
-
-
