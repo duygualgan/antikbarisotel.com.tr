@@ -60,6 +60,11 @@ const routes = [
     name: "edit",
     component: () => import(/* webpackChunkName: "contact" */ '../views/EditNews.vue')  
   },
+  {
+    path: "/galeri/:id",
+    name: "galeri",
+    component: () => import(/* webpackChunkName: "contact" */ '../views/AddGaleri.vue')  
+  },
 ]
 
 const router = createRouter({

@@ -2,7 +2,10 @@
   <div class="detailss">
     <h1>{{ news.title }}</h1>
     <p class="date_details">{{ news.news_date }}</p>
-    <p class="detail_text">{{ news.text }}</p>
+    <h3>özet haber</h3>
+    <p class="detail_text">{{ news.summary }}</p>
+    <h3>detay haber</h3>
+    <p class="detail_text">{{ news.details }}</p>
     <img class="detailsimg" :src="news.images" :alt="news.title">
 
   </div>
@@ -18,7 +21,8 @@ export default {
         title: '',
         images: '',
         news_date: '',
-        text: ''
+        summary: '',
+        details: ''
       }
     };
   },

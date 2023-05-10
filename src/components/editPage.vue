@@ -10,7 +10,7 @@
             <input type="date" id="date" v-model="news.news_date" name="news_date" required>
 
             <label for="text">Haber Metini</label>
-            <textarea id="text" v-model="news.text" required></textarea>
+            <textarea id="text" v-model="news.summary" required></textarea>
 
             <label for="images">Haber Resmi</label>
             <img id="oldImage" class="detailsimg" :src="news.old_images" :alt="news.title">
@@ -32,7 +32,7 @@ export default {
             news: {
                 title: '',
                 news_date: '',
-                text: '',
+                summary: '',
                 images: ''
             },
         };
@@ -45,7 +45,7 @@ export default {
                 .then(response => {
                     console.log(response.data)
                     this.news.title = response.data.title
-                    this.news.text = response.data.text
+                    this.news.summary = response.data.summary
                     this.news.news_date = new Date(response.data.news_date).toISOString().substr(0, 10);
                     this.news.old_images = response.data.images.map(images => `data:image/png;base64, ${images}`).join(',');
                     this.news.old_imagePath = response.data.imagePath
@@ -57,7 +57,7 @@ export default {
             const formData = new FormData();
             formData.append('title', this.news.title);
             formData.append('news_date', this.news.news_date);
-            formData.append('text', this.news.text);
+            formData.append('text', this.news.summary);
             formData.append('images', this.news.images);
             formData.append('old_imagePath', this.news.old_imagePath);
             console.log(formData)
