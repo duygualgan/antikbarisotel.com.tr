@@ -1,5 +1,6 @@
 <template>
   <div class="haberedit">
+    <h1>Haberler</h1>
     <ul>
       <li v-for="news in haberler" :key="news.id">
         <div class="news-container">
@@ -9,14 +10,14 @@
             <img class="newsimg" :src="news.images" :alt="news.title">
           </div>
           <div class="news-buttons">
-            <router-link :to="{ name: 'edit', params: { id: news.id } }"> Edit </router-link>
+            <router-link :to="{ name: 'edit', params: { id: news.id } }" class="edit"> Edit </router-link>
             <button @click="silHaber(news)">Sil</button>
           </div>
         </div>
       </li>
     </ul>
     <confirm-dialog :visible="dialogVisible" @confirmed="silOnaylandi" @cancelled="silIptalEdildi">
-     
+
     </confirm-dialog>
   </div>
 </template>
@@ -65,6 +66,6 @@ export default {
     });
     return { haberler, silHaber };
   },
- 
+
 };
 </script>

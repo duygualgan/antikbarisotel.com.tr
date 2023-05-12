@@ -1,6 +1,6 @@
 <template>
     <div class="add-news">
-        <h1>Galeri</h1>
+        <h1>Habere Galeri Ekle</h1>
         <h1>{{ news.title }}</h1>
         <p class="detail_text">{{ news.summary }}</p>
         <img class="detailsimg" :src="news.images" :alt="news.title">
@@ -9,7 +9,7 @@
         <div v-for="(image, index) in url" :key="index">
             <img :src="image.image" style="max-width: 300px; max-height: 300px;">
         </div>
-        <button @click="saveImages">Resimleri Kaydet</button>
+        <button @click="saveImages" class="güncellebtn">Resimleri Kaydet</button>
     </div>
 </template>
   
@@ -80,7 +80,6 @@ export default {
                 console.log(error);
             });
 
-    }
+    } 
 }
 </script>
-  

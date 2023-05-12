@@ -65,6 +65,11 @@ const routes = [
     name: "galeri",
     component: () => import(/* webpackChunkName: "contact" */ '../views/AddGaleri.vue')  
   },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import(/* webpackChunkName: "contact" */ '../views/LoginScreen.vue')  
+  },
 ]
 
 const router = createRouter({

@@ -1,23 +1,22 @@
 <template>
-  <div class="news">
-    <h2 class="colorh2">HABERLER</h2>
-    <div class="onenews" v-for="news in filteredNews" :key="news.id">
-      <div class="news-header">
-        <h2>{{ news.title }}</h2>
-        <p class="date">{{ formatDate(news.news_date) }}</p>
-      </div>
-      <div class="news-body">
-        <img class="newsimg" :src="news.images" :alt="news.title">
-        <p class="summary">{{ news.summary }}</p>
-      </div>
-      <p>{{ news.text }}</p>
-      <router-link :to="{ name: 'newsDetails', params: { id: news.id } }" class="" > Haber Detayları </router-link>
-      <router-view />
-    </div>
-  </div>
+    <section class = "customers" id = "customers">
+        <div class = "sec-width">
+            <div class = "title">
+                <h2>EN SON HABERLER</h2>
+            </div>
+            <div class = "customers-container" >
+               
+                <div class = "customer" v-for="news in filteredNews" :key="news.id" > 
+                    <img  :src="news.images" :alt="news.title">            
+                    <h3>{{ news.title }}</h3>
+                    <p>{{ news.summary }}</p>          
+                    <span>{{ formatDate(news.news_date) }}</span>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 
-  
 <script lang="js">
 import { onMounted, ref } from 'vue';
 import axios from 'axios';
@@ -38,7 +37,7 @@ export default {
 
     onMounted(async () => {
       try {
-        const response = await axios.get("http://localhost:3000/status");
+        const response = await axios.get("http://localhost:3000/status/son3");
 
         const news = response.data.map(item => {          
           return {
@@ -59,7 +58,7 @@ export default {
       }
     });
 
-    return { filteredNews,formatDate };
+    return { filteredNews, formatDate };
   }
 };
 </script>

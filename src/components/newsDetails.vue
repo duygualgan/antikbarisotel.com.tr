@@ -1,19 +1,18 @@
 <template>
   <div class="detailss">
     <h1>{{ news.title }}</h1>
-    <p class="date_details">{{ news.news_date }}</p>
-    <h3>özet haber</h3>
-    <p class="detail_text">{{ news.summary }}</p>
-    <h3>detay haber</h3>
-    <p class="detail_text">{{ news.details }}</p>
-    <img class="detailsimg" :src="news.images" :alt="news.title">
+    <p class="date_details">{{ formatDate(news.news_date) }}</p>
 
-    <!-- Galeri Resimleri -->
-    <!-- <div class="gallery">
-      <img v-for="(image, index) in news_gallery" :src="image.gallery_image" :alt="'Image ' + (index + 1)" :key="index" />
-    </div> -->
-    <div v-for="(image, index) in news_gallery" :key="index">
-      <img :src="image.gallery_image" style="max-width: 300px; max-height: 300px;">
+    <img class="detailsimg" :src="news.images" :alt="news.title">
+    
+    <h3>Haber Detayı</h3>
+    <p class="detail_text">{{ news.details }}</p>
+
+    <h3>Haber Galerisi</h3>
+    <div class="image-grid">
+      <div v-for="(image, index) in news_gallery" :key="index" class="grid-item">
+        <img :src="image.gallery_image" style="max-width: 300px; max-height: 300px;">
+      </div>
     </div>
   </div>
 </template>
@@ -31,7 +30,7 @@ export default {
         news_date: '',
         summary: '',
         details: ''
-      }
+      }      
     };
   },
   created() {
@@ -43,10 +42,11 @@ export default {
 
         this.news = response.data;
         this.news.images = response.data.images.map(image => `data:image/png;base64, ${image}`).join(',');
-        this.news_gallery = response.data.gallery_image.map(image => ({
-          gallery_image: `data:image/png;base64, ${image.gallery_image}`
-        }));
 
+        // Galeri resimlerini news_gallery dizisine atayın
+        this.news_gallery = response.data.gallery_image.map(image => ({
+          gallery_image: `data:image/png;base64, ${image}`
+        }));
 
         console.log(this.news);
         console.log(this.news_gallery);
@@ -56,6 +56,16 @@ export default {
       .catch(error => {
         console.log(error);
       });
+  },
+  setup() {
+    const formatDate = (dateString) => {
+      const date = new Date(dateString);
+      return date.toLocaleString("tr-TR", { day: "numeric", month: "long", year: "numeric" });
+    };
+
+    
+
+    return {formatDate };
   }
 };
 </script>

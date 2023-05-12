@@ -16,26 +16,24 @@
           <ul>
             <li>
               <router-link to="/" class="nav-top-link" >Ana Sayfa</router-link>
-                <!-- <a href="#" data-after="Anasayfa">Anasayfa</a> -->
             </li>
             <li>
               <router-link to="/otel" class="nav-top-link" >Otel</router-link>
-                <!-- <a href="#" data-after="Otel">Otel</a> -->
             </li>
             <li>
               <router-link to="/odalar" class="nav-top-link" >Odalar</router-link>
-                <!-- <a href="#" data-after="Odalar">Odalar</a> -->
             </li>
             <li>
               <router-link to="/hizmetlerimiz" class="nav-top-link" >Hİzmetler</router-link>
-                <!-- <a href="#" data-after="Hizmetler">Hİzmetler</a> -->
             </li>
             <!-- <li>
                 <a href="rezervasyon.html">Rezervasyon</a>
             </li> -->
             <li>
               <router-link to="/iletisim" class="nav-top-link" >İLETİŞİM</router-link>
-                <!-- <a href="#" data-after="İletişim">İLETİŞİM</a> -->
+            </li>
+            <li>
+              <router-link to="/news" class="nav-top-link" >HABERLER</router-link>
             </li>
         </ul>
         </div>
