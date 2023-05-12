@@ -1671,3 +1671,15 @@ nav ul li span {
     justify-content: center;
     align-items: center;
   }
+
+.godetails{
+    background-color: white;
+    color: var(--red);
+    font-size: 17px;
+    box-sizing: border-box;
+    border: 1px solid var(--red);
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 190px;
+}

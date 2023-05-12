@@ -4,13 +4,14 @@
             <div class = "title">
                 <h2>EN SON HABERLER</h2>
             </div>
-            <div class = "customers-container" >
-               
+            <div class = "customers-container" >               
                 <div class = "customer" v-for="news in filteredNews" :key="news.id" > 
+                    <router-link :to="{ name: 'newsDetails', params: { id: news.id } }">
                     <img  :src="news.images" :alt="news.title">            
                     <h3>{{ news.title }}</h3>
                     <p>{{ news.summary }}</p>          
                     <span>{{ formatDate(news.news_date) }}</span>
+                </router-link>
                 </div>
             </div>
         </div>

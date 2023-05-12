@@ -17,22 +17,25 @@
   </div>
 </template>
 
+
+
 <script>
 import axios from 'axios';
 
 export default {
   data() {
     return {
-      news_gallery: [], // news_gallery'i boş bir dizi olarak başlatın
+      news_gallery: [], 
       news: {
         title: '',
         images: '',
         news_date: '',
         summary: '',
-        details: ''
+        details: '',
       }      
     };
   },
+
   created() {
     const id = this.$route.params.id;
     axios.get(`http://localhost:3000/news/${id}`)
@@ -43,7 +46,6 @@ export default {
         this.news = response.data;
         this.news.images = response.data.images.map(image => `data:image/png;base64, ${image}`).join(',');
 
-        // Galeri resimlerini news_gallery dizisine atayın
         this.news_gallery = response.data.gallery_image.map(image => ({
           gallery_image: `data:image/png;base64, ${image}`
         }));

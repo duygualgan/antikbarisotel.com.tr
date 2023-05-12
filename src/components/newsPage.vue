@@ -10,8 +10,7 @@
         <img class="newsimg" :src="news.images" :alt="news.title">
         <p class="summary">{{ news.summary }}</p>
       </div>
-      <p>{{ news.text }}</p>
-      <router-link :to="{ name: 'newsDetails', params: { id: news.id } }" class="" > Haber Detayları </router-link>
+      <router-link :to="{ name: 'newsDetails', params: { id: news.id } }" class="godetails" > Haber Detayları </router-link>
       <router-view />
     </div>
   </div>
