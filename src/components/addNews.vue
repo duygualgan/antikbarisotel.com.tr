@@ -10,7 +10,7 @@
       <input type="date" id="date" v-model="news.news_date" required>
 
       <label for="text">Haber Metini Özeti</label>
-      <textarea id="summary" v-model="news.summary" required></textarea>
+      <textarea id="summary" v-model="news.summary" required maxlength="250" ></textarea>
 
       <label for="text">Haber Metini Detayı</label>
       <textarea id="details" v-model="news.details" required></textarea>
@@ -24,7 +24,7 @@
 </template>  
 
 <script>
-import axios from 'axios'
+import axios from 'axios' 
 
 export default {
   data() {
@@ -39,6 +39,10 @@ export default {
         details: ''
       }
     }
+  },
+  created() {
+    const today = new Date().toISOString().split('T')[0];
+    this.news.news_date = today;
   },
   methods: {
     async saveNews() {

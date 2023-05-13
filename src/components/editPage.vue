@@ -19,7 +19,6 @@
             <img id="oldImage" class="detailsimg" :src="news.old_images" :alt="news.title">
             <input type="file" id="images" name="images" @change="onImageChange">
 
-
             <button type="submit">GÜNCELLE</button>
         </form>
     </div>
@@ -32,6 +31,10 @@ export default {
     data() {
         return {
             newsId: '',
+            news_gallery: [],
+            url: [],
+            news_id: null,
+            newsGId: '',
             news: {
                 title: '',
                 news_date: '',
@@ -42,6 +45,17 @@ export default {
         };
     },
     methods: {
+        onImageChange2() {
+            this.url = [];
+            this.fileInput = this.$refs.fileInput;
+            for (let i = 0; i < this.fileInput.files.length; i++) {
+                let reader = new FileReader();
+                reader.readAsDataURL(this.fileInput.files[i]);
+                reader.onload = () => {
+                    this.url.push({ image: reader.result });
+                }
+            }
+        },
         getNews() {
             const id = this.$route.params.id;
 
@@ -59,6 +73,7 @@ export default {
                 .catch(error => console.error(error));
         },
         updateNews() {
+
             const formData = new FormData();
             formData.append('title', this.news.title);
             formData.append('news_date', this.news.news_date);
@@ -66,6 +81,7 @@ export default {
             formData.append('details', this.news.details);
             formData.append('images', this.news.images);
             formData.append('old_imagePath', this.news.old_imagePath);
+
             console.log(formData)
             axios.put(`http://localhost:3000/update-news/${this.newsId}`, formData, {
                 headers: {
@@ -74,7 +90,9 @@ export default {
             })
                 .then(response => {
                     console.log(response.data);
-                    this.$router.push('/haberler');
+                    this.$router.push('/galeri/update/' + this.newsId)
+
+                    //this.$router.push('/haberler');
                 })
                 .catch(error => console.error(error));
         },

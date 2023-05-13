@@ -64,9 +64,7 @@ export default {
       const date = new Date(dateString);
       return date.toLocaleString("tr-TR", { day: "numeric", month: "long", year: "numeric" });
     };
-
     
-
     return {formatDate };
   }
 };

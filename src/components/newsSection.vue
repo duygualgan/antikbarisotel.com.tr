@@ -45,7 +45,7 @@ export default {
             id: item.id,
             images: `data:image/png;base64, ${item.imageAsBase64}`,
             news_date: item.news_date,
-            summary: item.summary,
+            summary: item.summary.length > 120 ? item.summary.substring(0, 120) + '...' : item.summary,
             title: item.title
           }
         })
@@ -58,6 +58,8 @@ export default {
         console.error(error);
       }
     });
+
+    
 
     return { filteredNews, formatDate };
   }

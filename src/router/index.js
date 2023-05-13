@@ -66,6 +66,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "contact" */ '../views/AddGaleri.vue')  
   },
   {
+    path: "/galeri/update/:id",
+    name: "editgaleri",
+    component: () => import(/* webpackChunkName: "contact" */ '../views/EditGaleri.vue')  
+  },
+  {
     path: "/login",
     name: "login",
     component: () => import(/* webpackChunkName: "contact" */ '../views/LoginScreen.vue')  
