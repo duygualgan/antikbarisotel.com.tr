@@ -46,7 +46,7 @@ export default {
             images: `data:image/png;base64, ${item.imageAsBase64}`,
             news_date: item.news_date,
             summary: item.summary.length > 120 ? item.summary.substring(0, 120) + '...' : item.summary,
-            title: item.title
+            title: item.title.length > 30 ? item.title.substring(0, 30) + '...' : item.title
           }
         })
         console.log(news)

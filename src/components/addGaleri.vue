@@ -10,6 +10,7 @@
             <img :src="image.image" style="max-width: 300px; max-height: 300px;">
         </div>
         <button @click="saveImages" class="güncellebtn">Resimleri Kaydet</button>
+        <router-link :to="{ name: 'edit', params: { id: news.id } }" class="edit"> Galeri Resimlerini Düzenle </router-link>
     </div>
 </template>
   

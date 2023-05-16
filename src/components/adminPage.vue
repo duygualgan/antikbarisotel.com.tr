@@ -20,20 +20,12 @@
               <span>Rezervasyonlar</span>
             </router-link>
           </li>
-          <!-- Diğer sayfalar buraya eklenebilir -->
         </ul>
       </nav>
     </div>
     <div class="content">
       <p class="pas">site paneli</p>
-      <div class="containersa">
-        <div class="box" @click="goToNewsManagement">
-          <router-link to="/addNews">
-            <i class="fa fa-newspaper"></i>
-            <h3>Haber Ekle</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </router-link>
-        </div>
+      <div class="containersa">        
         <div class="box" @click="goToNewsManagement">
           <router-link to="/haberler">
             <i class="fa fa-newspaper"></i>

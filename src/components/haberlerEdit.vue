@@ -1,6 +1,9 @@
 <template>
   <div class="haberedit">
-    <h1>Haberler</h1>
+    <div class="addnews">
+      <h1>Haberler</h1>
+      <router-link :to="{ name: 'addNews'  }" class="gogaleri"> Haber Ekle </router-link>
+    </div>
     <ul>
       <li v-for="news in haberler" :key="news.id">
         <div class="news-container">
@@ -12,6 +15,7 @@
           <div class="news-buttons">
             <router-link :to="{ name: 'edit', params: { id: news.id } }" class="edit"> Edit </router-link>
             <button @click="silHaber(news)">Sil</button>
+            <router-link :to="{ name: 'editgaleri', params: { id: news.id } }" class="galeris"> Galeri </router-link>
           </div>
         </div>
       </li>

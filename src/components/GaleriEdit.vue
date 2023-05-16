@@ -5,11 +5,12 @@
 
     <h3>Eski Haber Galerisi</h3>
     <div class="image-grid">
-      <div v-for="(image, index) in news_gallery" :key="index" class="grid-item">
-        <img :src="image.gallery_image" style="max-width: 300px; max-height: 300px;">
+      <div v-for="(image1, index) in news_gallerys" :key="index" class="grid-item">
+        <img :src="image1.gallery_image" style="max-width: 300px; max-height: 300px;" @click="silHaber(news_gallery)">
       </div>
     </div>
 
+    <h3>Yeni Haber Resimleri Ekle</h3>
     <input type="file" ref="fileInput" @change="onImageChange" multiple>
     <div v-for="(image, index) in url" :key="index">
       <img :src="image.image" style="max-width: 300px; max-height: 300px;">
@@ -69,7 +70,8 @@ export default {
         .catch(error => {
           console.error(error);
         });
-    }
+    },
+
   },
   created() {
     const id = this.$route.params.id;
@@ -86,7 +88,7 @@ export default {
       .catch(error => {
         console.log(error);
       });
-  }
+  },
 
 }
 </script>

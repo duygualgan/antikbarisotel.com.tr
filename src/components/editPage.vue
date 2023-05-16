@@ -90,9 +90,9 @@ export default {
             })
                 .then(response => {
                     console.log(response.data);
-                    this.$router.push('/galeri/update/' + this.newsId)
+                    // this.$router.push('/galeri/update/' + this.newsId)
 
-                    //this.$router.push('/haberler');
+                    this.$router.push('/haberler');
                 })
                 .catch(error => console.error(error));
         },

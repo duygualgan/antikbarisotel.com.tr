@@ -1635,7 +1635,7 @@ nav ul li span {
 .edit{
     font-size: 16px;
     color: white;
-    background-color: green;
+    background-color: rgb(68, 153, 68);
     border: none;
     padding: 8px;
     width: 100%;
@@ -1686,5 +1686,50 @@ nav ul li span {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
+}
+.addnews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
   }
   
+  .addnews h1 {
+    margin: 0;
+  }
+  
+  .addnews .gogaleri {
+    font-size: 20px;
+    color: var(--red);
+    background-color: white;
+    box-sizing: border-box;
+    border: 2px solid var(--red);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .addnews::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .galeris{
+    font-size: 16px;
+    color: white;
+    background-color: rgb(79, 79, 237);
+    border: none;
+    padding: 8px;
+    width: 100%;
+    max-width: 150px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }

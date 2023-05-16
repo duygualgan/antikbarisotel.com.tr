@@ -10,7 +10,7 @@
       <input type="date" id="date" v-model="news.news_date" required>
 
       <label for="text">Haber Metini Özeti</label>
-      <textarea id="summary" v-model="news.summary" required maxlength="250" ></textarea>
+      <textarea id="summary" v-model="news.summary" required maxlength="250"></textarea>
 
       <label for="text">Haber Metini Detayı</label>
       <textarea id="details" v-model="news.details" required></textarea>
@@ -24,12 +24,12 @@
 </template>  
 
 <script>
-import axios from 'axios' 
+import axios from 'axios'
 
 export default {
   data() {
     return {
-      newsId:'',
+      newsId: '',
       news: {
         id: '',
         title: '',
@@ -47,32 +47,24 @@ export default {
   methods: {
     async saveNews() {
 
-      // const formData = new FormData()
-      // formData.append('title', this.news.title)
-      // formData.append('news_date', this.news.news_date)
-      // formData.append('text', this.news.text)
-      // formData.append('images', this.news.images);
-
-
-      // console.log(formData)
-
-        await axios.post('http://localhost:3000/api/news', this.news, {
-          headers: {
-            'Content-Type': 'multipart/form-data'
-          }
-        })
+      await axios.post('http://localhost:3000/api/news', this.news, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      })
         .then(response => {
-        this.$router.push('/galeri/' + response.data.newsId)
-      })
-      .catch(error => {
-        console.log(error)
-      })
+          // this.$router.push('/galeri/' + response.data.newsId)
+          this.$router.push('/haberler');
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.log(error)
+        })
     },
     onImageChange(event) {
       const file = event.target.files[0];
       this.news.images = file;
 
-      // Görüntüyü önizleme alanında göstermek için
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = () => {
