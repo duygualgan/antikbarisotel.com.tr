@@ -5,7 +5,6 @@
             <h2>HİZMETLERİMİZ</h2>
         </div>
         <div class = "services-container">
-            <!-- single service -->
             <article class = "service">
                 <div class = "service-icon">
                     <span>
@@ -17,8 +16,6 @@
                     <p>Spesiyal yemek çeşitlerini bulabileceğiniz körfez manzaralı restoranımızda, Türk mutfağından seçmeler ile unutulmaz tatlar alacaksınız.</p>                    
                 </div>
             </article>
-            <!-- end of single service -->
-            <!-- single service -->
             <article class = "service">
                 <div class = "service-icon">
                     <span>
@@ -30,8 +27,6 @@
                     <p>Dostlarınızla sohbet ederken alkolsüz içeceğinizi zevkle yudumlayabileceğiniz, tatlandırılmış nezih bir ortam.</p>
                 </div>
             </article>
-            <!-- end of single service -->
-            <!-- single service -->
             <article class = "service">
                 <div class = "service-icon">
                     <span>
@@ -43,8 +38,6 @@
                     <p>Televizyon seyrederken oyun oynayabileceğiniz huzur verici ortamımızı görmelisiniz.</p>                   
                 </div>
             </article>
-            <!-- end of single service -->
-            <!-- single service -->
             <article class = "service">
                 <div class = "service-icon">
                     <span>
@@ -55,8 +48,7 @@
                     <h2>Çatı Toplantı Salonu</h2>
                     <p>Körfez manzaralı ve her türlü sunumunuzu gerçekleştirebileceğiniz donanıma sahip 65 m2 alanlı toplantı salonumuz, gerektiğinde restoranımız ile birleşebilme özelliği sayesinde 150 m2’lik alanı kullanımınıza sunabilmektedir.</p>                    
                 </div>
-            </article>
-            <!-- end of single service -->            
+            </article>            
         </div>
     </section>
 </template>

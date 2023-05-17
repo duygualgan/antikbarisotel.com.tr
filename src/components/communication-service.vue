@@ -4,7 +4,6 @@
             <h2>HİZMETLERİMİZ</h2>
         </div>
         <div class="services-container">
-            <!-- single service -->
             <article class="service">
                 <div class="service-icon">
                     <span>
@@ -51,8 +50,6 @@
                     </table>
                 </div>
             </article>
-            <!-- end of single service -->
-            <!-- single service -->
             <article class="service">
                 <div class="service-icon">
                     <span>
@@ -62,13 +59,12 @@
                 <div class="service-content">
                     <h2>Adres</h2>
                     <p>Tepecik Mah. İstiklal Cad. Yavuz Sok. No:24 İzmit - Kocaeli / Türkiye</p>
-                    <p><a href="https://www.youtube.com/">info@antikbarisotel.com</a></p>
+                    <p><a href="/iletisim">info@antikbarisotel.com</a></p>
                     <p>Telefon: +90 262 321 77 71</p>
                     <p>Gsm: +90 533 727 72 77</p>
                     <p>Fax: +90 262 321 77 92</p>
                 </div>
             </article>
-            <!-- end of single service -->
         </div>
     </section>
 </template>

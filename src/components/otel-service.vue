@@ -4,7 +4,6 @@
             <h2>HİZMETLERİMİZ</h2>
         </div>
         <div class="services-container">
-            <!-- single service -->
             <article class="service">
                 <div class="service-icon">
                     <span>
@@ -51,8 +50,6 @@
                     </table>
                 </div>
             </article>
-            <!-- end of single service -->
-            <!-- single service -->
             <article class="service">
                 <div class="service-icon">
                     <span>
@@ -71,7 +68,6 @@
                     <p>Yeni Gün Başlangıcı 06:00</p>
                 </div>
             </article>
-            <!-- end of single service -->
         </div>
     </section>
 </template>

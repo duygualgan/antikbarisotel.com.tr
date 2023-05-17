@@ -978,7 +978,6 @@ footer {
     }
 }
 
-
 /**/
 
 .cerceve-ust {
@@ -1042,7 +1041,6 @@ footer {
         left: -300%;
     }
 }
-
 
 /*İletişim*/
 .container {
@@ -1376,8 +1374,6 @@ form button[type="submit"]:hover {
     padding: 1rem 0;
 }
 
-
-
 input[type="file"] {
     display: block;
     width: 100%;
@@ -1399,8 +1395,6 @@ input[type="file"]:focus {
     color: #555;
     border-color: #555;
 }
-
-
 
 .add-news button[type="submit"] {
     background-color: var(--red);
@@ -1464,8 +1458,6 @@ input[type="file"]:focus {
     display: flex;
     justify-content: center;
 }
-
-
 
 
 /* real admin page */
@@ -1668,6 +1660,12 @@ nav ul li span {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #000000; 
+    padding: 10px; 
+  }
+  .grid-item img {
+    max-width: 300px;
+    max-height: 300px;
   }
 
 .godetails{
@@ -1732,4 +1730,28 @@ nav ul li span {
     margin-top: 10px;
     display: flex;
     justify-content: center;
+  }
+
+  .image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  
+  .detailss {
+    overflow: hidden; 
   }

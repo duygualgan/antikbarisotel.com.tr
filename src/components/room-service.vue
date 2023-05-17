@@ -4,7 +4,6 @@
             <h2>OdaLar Hakkında</h2>
         </div>
         <div class="services-container">
-            <!-- single service -->
             <article class="service">
                 <div class="service-icon">
                     <span>
@@ -21,8 +20,6 @@
                     <p>Misafirlerimiz için emanet kasalarımız.</p>
                 </div>
             </article>
-            <!-- end of single service -->
-            <!-- single service -->
             <article class="service">
                 <div class="service-icon">
                     <span>
@@ -41,7 +38,6 @@
                     <p>Yeni Gün Başlangıcı 06:00</p>
                 </div>
             </article>
-            <!-- end of single service -->
         </div>
     </section>
     <section class="services sec-width" id="services">

@@ -59,15 +59,10 @@ export default {
     logout() {
       axios.post('http://localhost:3000/api/logout')
         .then(() => {
-          // Oturum sonlandırıldıktan sonra yerel saklama alanını temizle
           localStorage.removeItem('authToken');
-          // Vuex store'da isLoggedIn durumunu güncelle
           this.$store.commit('setLoggedIn', false);
 
-          // Kullanıcının oturum bilgilerini sıfırla
           this.kullanıcı = null;
-
-          // Giriş sayfasına yönlendir
           this.$router.push('/login');
         })
         .catch((error) => {

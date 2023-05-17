@@ -5,7 +5,6 @@
             <h2>Odalarımız</h2>
         </div>
         <div class = "rooms-container">
-            <!-- single room -->
             <article class = "room">
                 <div class = "room-image">
                     <img src = "../assets/foto/oda-tek.jpg" alt = "room image">
@@ -35,8 +34,6 @@
                     <!-- <button type = "button" class = "btn">Rezervasyon Yap</button> -->
                 </div>
             </article>
-            <!-- end of single room -->
-            <!-- single room -->
             <article class = "room">
                 <div class = "room-image">
                     <img src = "../assets/foto/Oda-cift.jpg" alt = "room image">
@@ -66,8 +63,6 @@
                     <!-- <button type = "button" class = "btn">Rezervasyon Yap</button> -->
                 </div>
             </article>
-            <!-- end of single room -->
-            <!-- single room -->
             <article class = "room">
                 <div class = "room-image">
                     <img src = "../assets/foto/oda1b.jpg" alt = "room image">
@@ -97,7 +92,6 @@
                     <!-- <button type = "button" class = "btn">Rezervasyon Yap</button> -->
                 </div>
             </article>
-            <!-- end of single room -->
         </div>
     </section>
   </template>

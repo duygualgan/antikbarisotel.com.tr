@@ -5,29 +5,21 @@
                 <h3>Antik <span> Barış Otel </span></h3>
                 <p class="footer-links">
                     <router-link to="/" class="nav-top-link" >Anasayfa</router-link>
-                    <!-- <a href="#">Anasayfa</a> -->
                 |
                 <router-link to="/otel" class="nav-top-link" >Otel</router-link>
-                <!-- <a href="#">Otel</a> -->
                 |
                 <router-link to="/odalar" class="nav-top-link" >Odalar</router-link>
-                <!-- <a href="#">Odalar</a> -->
                 |
                 <router-link to="/hizmetlerimiz" class="nav-top-link" >Hizmetler</router-link>
-                <!-- <a href="#">Hizmetler</a> -->
                 |
                 
-                <!-- <a href="rezervasyon.html">Rezervasyon</a>-->
-                | 
                 <router-link to="/iletisim" class="nav-top-link" >İletişim</router-link>
-                <!-- <a href="#">İletişim</a> -->
                 </p>
                 <p class="footer-company-about">
                     
                     <strong>Antik Barış Otel</strong>, Barış Şirketler Grubu üyesidir.
                 </p>
-                <!-- <p class="footer-company-name">Copyright 2023 ©  <strong>Duygu Algan</strong>
-                    all right reserved</p> -->
+                
             </div>
             <div class="footer-center">
                 <div>
